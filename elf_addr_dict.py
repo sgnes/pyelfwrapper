@@ -117,6 +117,9 @@ class ElfAddrObj(ELFFile):
                     if "DW_AT_name" in attrs and struct_name is not None:
                         self.member_dict["{}.{}".format(attrs["DW_AT_name"][2].strip(),struct_name)] = self.struct_dict[struct_name]
                         member_name = attrs['DW_AT_name'][2].strip()
+                        if member_name.startswith("(indirect string, offset:"):
+                            member_name = member_name.split(":")[2].strip()
+                            attrs['DW_AT_name'] = (attrs['DW_AT_name'][0], attrs['DW_AT_name'][1], member_name)
                         self.struct_dict[struct_name][member_name] = attrs
                     else:
                         pass
