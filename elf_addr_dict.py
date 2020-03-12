@@ -27,7 +27,7 @@ class ElfAddrObj(ELFFile):
         self.symbol_dict = {}
         self._versioninfo = None
         self._re_pattern = re.compile(r'\d+\s+[a-z]+\s+[a-z]+:\s+(\d+)\s+(\d+)\s+\(')
-        self._elf_file_handler = open(r'd:\test.elf', 'rb')
+        self._elf_file_handler = open(elf_file, 'rb')
         self.elffile = ELFFile(self._elf_file_handler)
         self.dwarfinfo = self.elffile.get_dwarf_info()
         self.section_offset = self.dwarfinfo.debug_info_sec.global_offset

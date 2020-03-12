@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
+import os
 
 from elf_addr_dict import ElfAddrObj
 
@@ -10,8 +11,8 @@ class TestApp(unittest.TestCase):
         pass
 
     def test_1(self):
-        elf = ElfAddrObj(r'.\example\test.elf')
-        self.assertEqual(elf.get_var_addrs("TestStructVar1"), 0xb00034dc)
+        elf = ElfAddrObj(os.path.join(os.getcwd(), r"example/test.elf"))
+        self.assertEqual(elf.get_var_addrs("TestStructVar1"), 0xd000005c)
 
 
 
