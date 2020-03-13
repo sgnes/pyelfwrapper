@@ -1,0 +1,1 @@
+tricore-readelf.exe --debug-dump=info Test.elf >info.txt
