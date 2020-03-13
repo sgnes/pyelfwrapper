@@ -12,7 +12,9 @@ class TestApp(unittest.TestCase):
 
     def test_1(self):
         elf = ElfAddrObj(os.path.join(os.getcwd(), r"example/Test.elf"))
-        self.assertEqual(elf.get_var_addrs("TestStructVar1"), 0xd000005c)
+        self.assertEqual(elf.get_var_addrs("TestStructVar1"), 0xd000916c)
+        self.assertEqual(elf.get_var_addrs("TestStruct5Var[1].TestUnionArrayLevel1TypeMem[3].level1_1.level2_1.levle3_1.level4_1.level5_2[1]"), 0xd00032b9)
+        self.assertEqual(elf.get_var_addrs("TestStructVar1.level1_1.level2_1.levle3_1.level4_1.level5_1"), 0xd000916c)
 
 
 

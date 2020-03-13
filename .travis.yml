@@ -18,7 +18,7 @@ install:
 
 script:
 #  python -m unittest discover ./pyccp/tests/
-   coverage run test.py
+   coverage run --source . --omit *elftools*,*coverage* test.py
 
 after_success:
   - coveralls
