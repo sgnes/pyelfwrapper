@@ -25,7 +25,10 @@ class ElfAddrObj(ELFFile):
         self.member_dict = {}
         self.variables_dict = {}
         self.symbol_dict = {}
+        self.union_dict = {}
         self._versioninfo = None
+        self._precoss_union = 0
+        self._last_union_key = 0
         self._re_pattern = re.compile(r'\d+\s+[a-z]+\s+[a-z]+:\s+(\d+)\s+(\d+)\s+\(')
         self._elf_file_handler = open(elf_file, 'rb')
         self.elffile = ELFFile(self._elf_file_handler)
@@ -98,10 +101,9 @@ class ElfAddrObj(ELFFile):
             die_depth = 0
             struct_name = None
             for die in cu.iter_DIEs():
-                #print(' <%s><%x>: Abbrev Number: %s%s' % (die_depth,die.offset,die.abbrev_code,(' (%s)' % die.tag) if not die.is_null() else ''))
-                if die.is_null():
-                    die_depth -= 1
-                    continue
+                if self._precoss_union and die.has_children:
+                    self._precoss_union = 0
+                    self._last_union_key = 0
                 if die.tag == "DW_TAG_structure_type":
                     attrs = self._attr_to_dict(die)
                     if "DW_AT_name" in attrs:
@@ -111,8 +113,7 @@ class ElfAddrObj(ELFFile):
                         pass
                         # Todo this maybe a union, will be handled later.
                     self.offset_dict[die.offset] = attrs
-
-                if die.tag == "DW_TAG_member":
+                elif die.tag == "DW_TAG_member":
                     attrs = self._attr_to_dict(die)
                     if "DW_AT_name" in attrs and struct_name is not None:
                         self.member_dict["{}.{}".format(attrs["DW_AT_name"][2].strip(),struct_name)] = self.struct_dict[struct_name]
@@ -122,16 +123,12 @@ class ElfAddrObj(ELFFile):
                             attrs['DW_AT_name'] = (attrs['DW_AT_name'][0], attrs['DW_AT_name'][1], member_name)
                         self.struct_dict[struct_name][member_name] = attrs
                     else:
-                        pass
+                        at_type = attrs['DW_AT_type'][2]
                         #Todo this maybe a union, will be handled later.
-                    if die.has_children:
-                        die_depth += 1
-
-                if die.tag == "DW_TAG_typedef":
+                elif die.tag == "DW_TAG_typedef":
                     attrs = self._attr_to_dict(die)
                     self.offset_dict[die.offset] = attrs
-
-                if die.tag == "DW_TAG_variable":
+                elif die.tag == "DW_TAG_variable":
                     attrs = self._attr_to_dict(die)
                     if "DW_AT_name" in attrs:
                         at_name = attrs["DW_AT_name"][2].strip()
@@ -140,6 +137,15 @@ class ElfAddrObj(ELFFile):
                         pass
                     attrs["abbrev_tag"] = die.tag
                     self.variables_dict[at_name] = attrs
+                elif die.tag == "DW_TAG_union_type":
+                    self._precoss_union = 1
+                    struct_name = None
+                    attrs = self._attr_to_dict(die)
+                    self._last_union_key = die.offset
+                    self.union_dict[die.offset] = [attrs]
+
+
+
 
     def _attr_to_dict(self, die):
         attrs = {attr[0]: attr for attr in
