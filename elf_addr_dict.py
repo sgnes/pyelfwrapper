@@ -14,6 +14,9 @@ from elftools.elf.gnuversions import (
     )
 from elftools.elf.dynamic import DynamicSection, DynamicSegment
 import logging
+from logging.config import fileConfig
+
+
 
 class ElfAddrObj(ELFFile):
     """
@@ -44,7 +47,7 @@ class ElfAddrObj(ELFFile):
         self.elffile = ELFFile(self._elf_file_handler)
         self.dwarfinfo = self.elffile.get_dwarf_info()
         self.section_offset = self.dwarfinfo.debug_info_sec.global_offset
-
+        fileConfig('logging.conf')
         self._logger = logging.getLogger()
         self._parse_symbol_table()
         self._parse_debug_info()
@@ -193,7 +196,7 @@ class ElfAddrObj(ELFFile):
         addr = None
         if "." in var:
             names = var.split(".")
-            full_offset = 0
+            all_mem_offset = 0
             root_full, members = names[0], names[1:]
             baseoffset = 0
             if '[' in root_full:
@@ -202,6 +205,7 @@ class ElfAddrObj(ELFFile):
                 struct_size = int(self.offset_dict[array_type[self.DW_AT_TYPE]]['DW_AT_byte_size'])
                 root_struct_name = self.offset_dict[array_type[self.DW_AT_TYPE]][self.DW_AT_NAME]
                 baseoffset = struct_size * int(offset)
+                self._logger.info("Array type found with name:{0}, base size:{1}, baseoffset:{2}".format(root_full, struct_size, baseoffset))
             else:
                 root_type = self.offset_dict[self.variables_dict[root_full][self.DW_AT_TYPE]]
                 root_struct_name = self.offset_dict[root_type[self.DW_AT_TYPE]][self.DW_AT_NAME]
@@ -213,31 +217,40 @@ class ElfAddrObj(ELFFile):
                 mem_base = mem
                 if '[' in mem:
                     mem_base, offset = re.findall(self.re_pattern_varname, mem)[0]
+                    offset_str = root_struct[mem_base]['DW_AT_data_member_location']
+                    off = re.findall(self._re_pattern, offset_str)[0]
+                    all_mem_offset += int(off)
                     root_type = self.offset_dict[root_struct[mem_base][self.DW_AT_TYPE]]
                     mem_type = self.offset_dict[self.offset_dict[self.array_type_dict[root_struct[mem_base][self.DW_AT_TYPE]][self.DW_AT_TYPE]][self.DW_AT_TYPE]]
                     mem_size = int(mem_type['DW_AT_byte_size'])
                     root_struct_name = self.offset_dict[array_type[self.DW_AT_TYPE]][self.DW_AT_NAME]
-                    membaseoffset = struct_size * int(offset)
+                    membaseoffset = mem_size * int(offset)
                     if mem_type[self.ABBREV_TAG] != self.DW_AT_BASE_TYPE:
                         root_struct = self.struct_dict[mem_type[self.DW_AT_NAME]]
+
+                    self._logger.info(
+                        "Array type found with base member name:{0}, base size:{1}, membaseoffset:{2}".format(mem, mem_size,
+                                                                                                membaseoffset))
 
                 else:
                     # None array field
                     offset_str = root_struct[mem_base]['DW_AT_data_member_location']
                     off = re.findall(self._re_pattern, offset_str)[0]
-                    full_offset += int(off)
-                    self._logger.info("member name:{}, offset:{}".format(mem_base, off))
+                    membaseoffset = int(off)
                     root_type = self.offset_dict[root_struct[mem_base][self.DW_AT_TYPE]]
                     if root_type[self.ABBREV_TAG] == self.DW_AT_TYPEDEF and root_type[self.DW_AT_TYPE] in self.offset_dict:
                         root_struct_name = self.offset_dict[root_type[self.DW_AT_TYPE]][self.DW_AT_NAME]
                         mem_type = self.offset_dict[root_type[self.DW_AT_TYPE]]
                         if mem_type[self.ABBREV_TAG] != self.DW_AT_BASE_TYPE:
                             root_struct = self.struct_dict[mem_type[self.DW_AT_NAME]]
+                    self._logger.info("Normal name:{0}, with offset:{1}".format(mem,membaseoffset))
 
-                full_offset += membaseoffset
-            addr = self.symbol_dict[root_base_name] + baseoffset + full_offset
+                all_mem_offset += membaseoffset
+            addr = self.symbol_dict[root_base_name] + baseoffset + all_mem_offset
+            self._logger.info("Symbol:{0}, base offset:{1}, member offset:{2}, addr:{3:#x}".format(var, baseoffset, all_mem_offset, addr))
         else:
             if var in self.symbol_dict:
                 addr = self.symbol_dict[var]
+                self._logger.info("Symbol:{0}, addr:{1:#x}".format(var, addr))
         return addr
 
