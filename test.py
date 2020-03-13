@@ -11,7 +11,7 @@ class TestApp(unittest.TestCase):
         pass
 
     def test_1(self):
-        elf = ElfAddrObj(os.path.join(os.getcwd(), r"example/test.elf"))
+        elf = ElfAddrObj(os.path.join(os.getcwd(), r"example/Test.elf"))
         self.assertEqual(elf.get_var_addrs("TestStructVar1"), 0xd000005c)
 
 
