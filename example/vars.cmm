@@ -1,0 +1,34 @@
+// T32_1000002 Mon Mar 16 09:08:22 2020
+
+B::
+
+TOOLBAR   ON
+STATUSBAR ON
+FramePOS 93.0 6.3333 202. 60.
+WinPAGE.RESet
+
+WinPAGE.Create P000
+WinCLEAR
+
+WinPOS 0.0 0.0 151. 39. 0. 0. W000
+Var.Watch
+
+VAR.ADDWATCH TestStruct5Var[1].TestUnionArrayLevel1TypeMem[3].level1_1.level2_1.levle3_1.level4_1.level5_2[1]
+VAR.ADDWATCH TestStructVar1.level1_2.level2_2.levle3_2.level4_2.level5_2
+VAR.ADDWATCH TestStruct5Var[1].TestUnionArrayLevel1TypeMem[3].level1_2.level2_2.levle3_2.level4_1.level5_2[1]
+VAR.ADDWATCH TestStructVar1.level1_1.level2_1.levle3_1.level4_1.level5_1
+VAR.ADDWATCH TestStructArrayVar1.level1_2.level2_1.levle3_2.level4_2.Filed1.filed1
+VAR.ADDWATCH TestStructArrayVar1.level1_2.level2_1.levle3_2.level4_2.Filed1.filed3
+VAR.ADDWATCH TestStructArrayVar1.level1_2.level2_1.levle3_2.level4_2.Filed1.filed2
+VAR.ADDWATCH TestStructArrayVar1.level1_2.level2_1.levle3_2.level4_2.Filed1.filed4
+VAR.ADDWATCH TestStructVar2.union1
+VAR.ADDWATCH TestStructVar2.unionStructl1.level2_1.levle3_2.level4_2.level5_4
+VAR.ADDWATCH TestStructArrayVar1.level1_2.level2_1.levle3_2.level4_2.Filed1
+VAR.ADDWATCH TestStructArrayVar1
+
+WinPOS 1.2857 21.667 73. 26. 13. 1. W001
+Data.dump v.address("TestStructArrayVar1.level1_2.level2_1.levle3_2.level4_2.Filed1.filed1") /DIALOG
+
+WinPAGE.select P000
+
+ENDDO
