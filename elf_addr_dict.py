@@ -41,6 +41,7 @@ class ElfAddrObj(ELFFile):
         self._versioninfo = None
         self._re_pattern = re.compile(r'DW_OP_plus_uconst:\s+(\d+)')
         self.re_pattern_varname = re.compile(r'([a-zA-Z_][a-zA-Z0-9_]+)\s*\[(\d+)\]')
+        self.re_pattern_array = re.compile(r"\[(\d+)\]")
         self._elf_file_handler = open(elf_file, 'rb')
         self.elffile = ELFFile(self._elf_file_handler)
         self.dwarfinfo = self.elffile.get_dwarf_info()
@@ -190,7 +191,6 @@ class ElfAddrObj(ELFFile):
                     i['DW_AT_data_member_location'] = attrs['DW_AT_data_member_location']
                     member_name = i[self.DW_AT_NAME]
                     self.struct_dict[struct_name][member_name] = i
-                # Todo this maybe a union, will be handled later.
             next_die = next(iter_dies)
         self._process_die(next_die, iter_dies)
 
@@ -201,11 +201,18 @@ class ElfAddrObj(ELFFile):
 
     def _process_array(self, die, iter_dies):
         attrs = self._attr_to_dict(die)
-        attrs_range = self._attr_to_dict(next(iter_dies))
-        attrs["array_range"] = attrs_range
-        self.array_type_dict[die.offset] = attrs
         self.offset_dict[die.offset] = attrs
-        pass
+
+        next_die = next(iter_dies)
+        upper_bound_list = []
+        while (next_die.tag == 'DW_TAG_subrange_type'):
+            attrs1 = self._attr_to_dict(next_die)
+            upper_bound_list.append(int(attrs1['DW_AT_upper_bound']))
+            next_die = next(iter_dies)
+
+        attrs['DW_AT_upper_bound'] = upper_bound_list
+        self.array_type_dict[die.offset] = attrs
+        self._process_die(next_die, iter_dies)
 
     def _attr_to_dict(self, die):
         attrs_raw = {attr[0]: attr for attr in
@@ -228,63 +235,91 @@ class ElfAddrObj(ELFFile):
 
     def get_var_addrs(self, var):
         addr = None
+        var = var.replace(' ', '')
         self._logger.info("Start processing variable :{0}".format(var))
         if "." in var:
             names = var.split(".")
-            all_mem_offset = 0
             root_full, members = names[0], names[1:]
-            baseoffset = 0
+            all_mem_offset, baseoffset, root_base_name,  root_type = 0, 0, root_full, None
             if '[' in root_full:
                 root_base_name, offset = re.findall(self.re_pattern_varname, root_full)[0]
-                array_type = self.array_type_dict[self.variables_dict[root_base_name][self.DW_AT_TYPE]]
-                array_base_size = int(self.offset_dict[array_type[self.DW_AT_TYPE]]['DW_AT_byte_size'])
-                root_struct_name = self.offset_dict[array_type[self.DW_AT_TYPE]][self.DW_AT_NAME]
+                root_type = self.array_type_dict[self.variables_dict[root_base_name][self.DW_AT_TYPE]]
+                array_base_size = int(self.offset_dict[root_type[self.DW_AT_TYPE]]['DW_AT_byte_size'])
                 baseoffset = array_base_size * int(offset)
                 self._logger.info("Array type found with name:{0}, base size:{1}, baseoffset:{2}".format(root_full, array_base_size, baseoffset))
-            else:
-                root_type = self.offset_dict[self.variables_dict[root_full][self.DW_AT_TYPE]]
-                root_struct_name = self.offset_dict[root_type[self.DW_AT_TYPE]][self.DW_AT_NAME]
-                root_base_name = root_full
+
+            root_type = self.offset_dict[self.variables_dict[root_base_name][self.DW_AT_TYPE]]
+            root_struct_name = self.offset_dict[root_type[self.DW_AT_TYPE]][self.DW_AT_NAME]
+
             root_struct = self.struct_dict[root_struct_name]
             for mem in members:
                 # first to find the member offset
-                membaseoffset = 0
                 mem_base = mem
                 if '[' in mem:
                     mem_base, offset = re.findall(self.re_pattern_varname, mem)[0]
-                    offset_str = root_struct[mem_base]['DW_AT_data_member_location']
-                    off = re.findall(self._re_pattern, offset_str)[0]
+                    off = re.findall(self._re_pattern, root_struct[mem_base]['DW_AT_data_member_location'])[0]
                     all_mem_offset += int(off)
                     self._logger.info("Element :{0}, offset:{1}".format(mem_base, off))
-                    root_type = self.offset_dict[root_struct[mem_base][self.DW_AT_TYPE]]
-                    mem_type = self.offset_dict[self.offset_dict[self.array_type_dict[root_struct[mem_base][self.DW_AT_TYPE]][self.DW_AT_TYPE]][self.DW_AT_TYPE]]
+                    root_type = self.offset_dict[self.array_type_dict[root_struct[mem_base][self.DW_AT_TYPE]][self.DW_AT_TYPE]]
+                    mem_type = self.offset_dict[root_type[self.DW_AT_TYPE]]
                     mem_size = int(mem_type['DW_AT_byte_size'])
-                    root_struct_name = self.offset_dict[array_type[self.DW_AT_TYPE]][self.DW_AT_NAME]
                     membaseoffset = mem_size * int(offset)
-                    if mem_type[self.ABBREV_TAG] != self.DW_AT_BASE_TYPE:
-                        root_struct = self.struct_dict[mem_type[self.DW_AT_NAME]]
-
                     self._logger.info("Array type found with base member name:{0}, base size:{1}, membaseoffset:{2}".format(mem, mem_size,membaseoffset))
 
                 else:
                     # None array field
-                    offset_str = root_struct[mem_base]['DW_AT_data_member_location']
-                    off = re.findall(self._re_pattern, offset_str)[0]
+                    off = re.findall(self._re_pattern, root_struct[mem_base]['DW_AT_data_member_location'])[0]
                     membaseoffset = int(off)
                     root_type = self.offset_dict[root_struct[mem_base][self.DW_AT_TYPE]]
-                    if root_type[self.ABBREV_TAG] == self.DW_AT_TYPEDEF and root_type[self.DW_AT_TYPE] in self.offset_dict:
-                        root_struct_name = self.offset_dict[root_type[self.DW_AT_TYPE]][self.DW_AT_NAME]
-                        mem_type = self.offset_dict[root_type[self.DW_AT_TYPE]]
-                        if mem_type[self.ABBREV_TAG] != self.DW_AT_BASE_TYPE:
-                            root_struct = self.struct_dict[mem_type[self.DW_AT_NAME]]
                     self._logger.info("Normal name:{0}, with offset:{1}".format(mem,membaseoffset))
 
+                if root_type[self.ABBREV_TAG] == self.DW_AT_TYPEDEF and root_type[self.DW_AT_TYPE] in self.offset_dict:
+                    mem_type = self.offset_dict[root_type[self.DW_AT_TYPE]]
+                    if mem_type[self.ABBREV_TAG] != self.DW_AT_BASE_TYPE:
+                        root_struct = self.struct_dict[mem_type[self.DW_AT_NAME]]
                 all_mem_offset += membaseoffset
             addr = self.symbol_dict[root_base_name] + baseoffset + all_mem_offset
             self._logger.info("End processing variable:{0}, base offset:{1}, member offset:{2}, addr:{3:#x}".format(var, baseoffset, all_mem_offset, addr))
         else:
-            if var in self.symbol_dict:
+            if '[' in var and ']' in var:
+                # it's a array
+                array_name = var[:var.find('[')]
+                base_addr = offset =  0
+                if array_name in self.symbol_dict:
+                    res = [int(i) for i in re.findall(self.re_pattern_array, var[var.find('['):])]
+                    array_base_type = self.offset_dict[self.offset_dict[self.variables_dict[array_name][self.DW_AT_TYPE]][self.DW_AT_TYPE]]
+                    array_base_type_name = array_base_type[self.DW_AT_NAME]
+                    array_base_type_size = int(self.offset_dict[array_base_type[self.DW_AT_TYPE]]['DW_AT_byte_size'])
+                    array_type = self.array_type_dict[self.variables_dict[array_name][self.DW_AT_TYPE]]
+                    if 'array_size_info' not in array_type:
+                        temp_array = array_type['DW_AT_upper_bound'].copy()
+                        temp_array.reverse()
+                        array_size_level = []
+                        if len(temp_array) > 1:
+                            temp_value = (temp_array[0] + 1) * array_base_type_size
+                            array_size_level.append(temp_value)
+                            for i in temp_array[1:(len(temp_array)-1)]:
+                                temp_value = (i + 1) * temp_value
+                                array_size_level.append(temp_value)
+                            array_size_level.reverse()
+                            array_size_level.append(array_base_type_size)
+                        else:
+                            array_size_level.append(array_base_type_size)
+                        array_type['array_size_info'] = array_size_level
+
+                    for i in range(len(res)):
+                        offset += res[i] * array_type['array_size_info'][i]
+                    base_addr = self.symbol_dict[array_name]
+                    self._logger.info("End processing variable:{0}, addr:{1:#x}".format(var, base_addr + offset))
+                    addr = base_addr + offset
+                    #for idx in res:
+                else:
+                    raise KeyError
+
+            elif var in self.symbol_dict:
                 addr = self.symbol_dict[var]
                 self._logger.info("End processing variable:{0}, addr:{1:#x}".format(var, addr))
+            else:
+                raise KeyError
         return addr
 
