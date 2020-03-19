@@ -3,270 +3,264 @@ Archive member included because of file (symbol)
 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
                               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o (_exit)
 
-Discarded input sections
-
- .text          0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
- .data          0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
- .bss           0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
- .text          0x00000000        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
- .data          0x00000000        0x8 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
- .text.call___do_global_dtors_aux
-                0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
- .text.call_frame_dummy
-                0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
- .text          0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
- .data          0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
- .bss           0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
- .data          0x00000000        0x0 src/hello.o
- .text          0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
- .data          0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
- .bss           0x00000000        0x8 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
- .text          0x00000000        0x2 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
- .data          0x00000000        0x8 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
- .bss           0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
- .jcr           0x00000000        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
- .text.call___do_global_ctors_aux
-                0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
- .text          0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
- .data          0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
- .bss           0x00000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
-
 ----- BEGIN EXTENDED MAP LISTING -----
 
 >>> Linker and link run information
 
 Linker version: GNU ld version (GNU Binutils) 2.20 (TriCore) using BFD version (GNU Binutils) 2.20 (v2.3), Tool Version v2.7
 Name of linker executable: c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/bin/ld.exe
-Date of link run: Mon Mar 16 10:12:11 2020
+Date of link run: Thu Mar 19 11:36:22 2020
 Name of linker map file: Test.map
 
 >>> Symbols (global (S = g) and static (S = l); sorted by address)
 
-============================================================================================================================================================================================================
-Start      End         Size S Name                      Memory   O-Sec         I-Sec                       Input object                                                                                     
-============================================================================================================================================================================================================
-0x00000400 0x00000400     0 g __ISTACK_SIZE             *ABS*    *ABS*         *ABS*                       *ABS*
-0x00001000 0x00001000     0 g __HEAP_SIZE               *ABS*    *ABS*         *ABS*                       *ABS*
-0x00001000 0x00001000     0 g __USTACK_SIZE             *ABS*    *ABS*         *ABS*                       *ABS*
-0x00002700 0x00002700     0 g __TRICORE_DERIVATE_NAME__ *ABS*    *ABS*         *ABS*                       *ABS*
-0x00004000 0x00004000     0 g __CSA_SIZE                *ABS*    *ABS*         *ABS*                       *ABS*
-0x00004000 0x00004000     0 g __PMU_DFLASH0_1_SIZE      *ABS*    *ABS*         *ABS*                       *ABS*
-0x00006000 0x00006000     0 g __PMI_PSPR_SIZE           *ABS*    *ABS*         *ABS*                       *ABS*
-0x00008000 0x00008000     0 g __BROM_SIZE               *ABS*    *ABS*         *ABS*                       *ABS*
-0x00008000 0x00008000     0 g __LMU_SRAM_SIZE           *ABS*    *ABS*         *ABS*                       *ABS*
-0x0000fe00 0x0000fe00     0 l $pcxi                     *ABS*    *ABS*         *ABS*                       *ABS*
-0x0000fe04 0x0000fe04     0 l $psw                      *ABS*    *ABS*         *ABS*                       *ABS*
-0x0000fe1c 0x0000fe1c     0 l CORE_ID                   *ABS*    *ABS*         *ABS*                       *ABS*
-0x0000fe28 0x0000fe28     0 l $isp                      *ABS*    *ABS*         *ABS*                       *ABS*
-0x0000fe38 0x0000fe38     0 l $fcx                      *ABS*    *ABS*         *ABS*                       *ABS*
-0x0000fe3c 0x0000fe3c     0 l $lcx                      *ABS*    *ABS*         *ABS*                       *ABS*
-0x00010000 0x00010000     0 g __PMU_DFLASH1_SIZE        *ABS*    *ABS*         *ABS*                       *ABS*
-0x0001c000 0x0001c000     0 g __DMI_DSPR_SIZE           *ABS*    *ABS*         *ABS*                       *ABS*
-0x00100000 0x00100000     0 g __PMU_DFLASH0_SIZE        *ABS*    *ABS*         *ABS*                       *ABS*
-0x00200000 0x00200000     0 g __PMU_PFLASH0_SIZE        *ABS*    *ABS*         *ABS*                       *ABS*
-0x00200000 0x00200000     0 g __PMU_PFLASH1_SIZE        *ABS*    *ABS*         *ABS*                       *ABS*
-0x80000000 0x80000000     0 g __PMU_PFLASH0_BEGIN       *ABS*    *ABS*         *ABS*                       *ABS*
-0x80200000 0x80200000     0 g __PMU_PFLASH1_BEGIN       *ABS*    *ABS*         *ABS*                       *ABS*
-0x8fff8000 0x8fff8000     0 g __BROM_BEGIN              *ABS*    *ABS*         *ABS*                       *ABS*
-0x90000000 0x90000000     0 g __LMU_SRAM_BEGIN          *ABS*    *ABS*         *ABS*                       *ABS*
-0xaf000000 0xaf000000     0 g __PMU_DFLASH0_BEGIN       *ABS*    *ABS*         *ABS*                       *ABS*
-0xaf100000 0xaf100000     0 g __PMU_DFLASH0_1_BEGIN     *ABS*    *ABS*         *ABS*                       *ABS*
-0xaf110000 0xaf110000     0 g __PMU_DFLASH1_BEGIN       *ABS*    *ABS*         *ABS*                       *ABS*
-0xc0000000 0xc0000000     0 g __PMI_PSPR_BEGIN          *ABS*    *ABS*         *ABS*                       *ABS*
-0xc0000020 0xc0000020     0 g _start                    PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000024 0xc0000024     0 l _startaddr                PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000040 0xc0000040     0 l do_endinit_cpuN           PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000004c 0xc000004c     0 l endinit_done_cpuN         PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000054 0xc0000054     0 l do_endinit_s              PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000066 0xc0000066     0 l endinit_done_s            PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000072 0xc0000072     0 l init_stack_pointers       PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc00000f2 0xc00000f2     0 l disable_safety_wdt        PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000116 0xc0000116     0 l jump_to_remapped          PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000122 0xc0000122     0 l __remapped                PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000015e 0xc000015e     0 l asm_clear_endinit_xx      PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000017e 0xc000017e     0 l asm_set_endinit_xx        PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000019e 0xc000019e     0 g __init_csa                PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc00001ee 0xc00001ee     0 l csa_loop                  PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000212 0xc0000212     0 g __clear_table_func        PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000021e 0xc000021e     0 l __clear_table_next        PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000236 0xc0000236     0 l __clear_dword             PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000023c 0xc000023c     0 l __clear_word              PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000024c 0xc000024c     0 l __clear_hword             PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000025c 0xc000025c     0 l __clear_byte              PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000264 0xc0000264     0 l __clear_table_done        PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000266 0xc0000266     0 g __copy_table_func         PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000026e 0xc000026e     0 l __copy_table_next         PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000288 0xc0000288     0 l __copy_dword              PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000292 0xc0000292     0 l __copy_word               PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc00002a4 0xc00002a4     0 l __copy_hword              PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc00002b6 0xc00002b6     0 l __copy_byte               PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc00002c2 0xc00002c2     0 l __copy_table_done         PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc00002c8 0xc00003bb   244 g main                      PMI_PSPR .text         .text                       src/hello.o
-0xc00003bc 0xc00003bc     0 l __do_global_dtors_aux     PMI_PSPR .text         .text.__do_global_dtors_aux c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xc0000406 0xc0000406     0 l frame_dummy               PMI_PSPR .text         .text.frame_dummy           c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xc0000422 0xc0000431    16 g _exit                     PMI_PSPR .text         .text._exit                 libos_exit.o
-0xc0000432 0xc0000432     0 l __do_global_ctors_aux     PMI_PSPR .text         .text.__do_global_ctors_aux c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
-0xc0000450 0xc0000450     0 g _init                     PMI_PSPR .init         .init                       c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
-0xc0000460 0xc0000460     0 g _fini                     PMI_PSPR .fini         .fini                       c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
-0xc0000468 0xc0000468     0 g __CTOR_LIST__             PMI_PSPR .ctors        .ctors                      Test.elf
-0xc0000468 0xc0000468     0 l __JCR_LIST__              PMI_PSPR .jcr          .jcr                        c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xc000046c 0xc000046c     0 l __CTOR_LIST__             PMI_PSPR .ctors        .ctors                      c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xc0000470 0xc0000470     0 l __CTOR_END__              PMI_PSPR .ctors        .ctors                      c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
-0xc0000478 0xc0000478     0 g __CTOR_END__              PMI_PSPR .ctors        .ctors                      Test.elf
-0xc0000478 0xc0000478     0 g __DTOR_LIST__             PMI_PSPR .dtors        .dtors                      Test.elf
-0xc000047c 0xc000047c     0 l __DTOR_LIST__             PMI_PSPR .dtors        .dtors                      c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xc0000488 0xc0000488     0 g __DTOR_END__              PMI_PSPR .dtors        .dtors                      Test.elf
-0xc0000488 0xc0000488     0 g __clear_table             PMI_PSPR .clear_sec    .clear_sec                  Test.elf
-0xc00004b0 0xc00004b0     0 g __copy_table              PMI_PSPR .copy_sec     .copy_sec                   Test.elf
-0xd0000000 0xd0000000     0 g __DMI_DSPR_BEGIN          *ABS*    *ABS*         *ABS*                       *ABS*
-0xd0000000 0xd0000000     0 l completed.3082            DMI_DSPR .bss          .bss                        c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xd0000004 0xd0000004     0 l dtor_idx.3084             DMI_DSPR .bss          .bss                        c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xd0000008 0xd0008747 34624 g TestStruct5Var            DMI_DSPR .bss          .bss                        src/hello.o
-0xd0008748 0xd000b627 12000 g TestVarArrayUint163d      DMI_DSPR .bss          .bss                        src/hello.o
-0xd000b628 0xd00113e7 24000 g TestVarArray3d            DMI_DSPR .bss          .bss                        src/hello.o
-0xd00113e8 0xd0011707   800 g TestVarArray2d            DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011708 0xd001172f    40 g TestVarArray1d            DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011730 0xd0011757    40 g TestVarArrayFloat32       DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011758 0xd001177f    40 g TestVarArrayUint32        DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011780 0xd0011783     4 g TestVarFloat2             DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011784 0xd0011787     4 g TestVarFloat1             DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011788 0xd001178b     4 g TestVaru32_3              DMI_DSPR .bss          .bss                        src/hello.o
-0xd001178c 0xd001178f     4 g TestVaru32_2              DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011790 0xd0011793     4 g TestVaru32_1              DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011794 0xd0011813   128 g TestStructVar2            DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011814 0xd0011c53  1088 g TestStructArrayVar1       DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011c54 0xd0012153  1280 g TestStructVar1Array       DMI_DSPR .bss          .bss                        src/hello.o
-0xd0012154 0xd00121d3   128 g TestStructVar1            DMI_DSPR .bss          .bss                        src/hello.o
-0xd00121d8 0xd00121d8     0 g __USTACK_BEGIN            DMI_DSPR .ustack       .ustack                     Test.elf
-0xd00131d8 0xd00131d8     0 g __ISTACK_BEGIN            DMI_DSPR .istack       .istack                     Test.elf
-0xd00131d8 0xd00131d8     0 g __USTACK                  DMI_DSPR .ustack       .ustack                     Test.elf
-0xd00131d8 0xd00131d8     0 g __USTACK_END              DMI_DSPR .ustack       .ustack                     Test.elf
-0xd00135d8 0xd00135d8     0 g __HEAP                    DMI_DSPR .heap         .heap                       Test.elf
-0xd00135d8 0xd00135d8     0 g __HEAP_BEGIN              DMI_DSPR .heap         .heap                       Test.elf
-0xd00135d8 0xd00135d8     0 g __ISTACK                  DMI_DSPR .istack       .istack                     Test.elf
-0xd00135d8 0xd00135d8     0 g __ISTACK_END              DMI_DSPR .istack       .istack                     Test.elf
-0xd00145d8 0xd00145d8     0 g __HEAP_END                DMI_DSPR .heap         .heap                       Test.elf
-0xd0014600 0xd0014600     0 g __CSA                     DMI_DSPR .csa          .csa                        Test.elf
-0xd0014600 0xd0014600     0 g __CSA_BEGIN               DMI_DSPR .csa          .csa                        Test.elf
-0xd0018600 0xd0018600     0 g __CSA_END                 DMI_DSPR .csa          .csa                        Test.elf
-0xf00360f0 0xf00360f0     0 l SCU_WDTSCON0              *ABS*    *ABS*         *ABS*                       *ABS*
-0xf00360f4 0xf00360f4     0 l SCU_WDTSCON1              *ABS*    *ABS*         *ABS*                       *ABS*
-0xf0036100 0xf0036100     0 l SCU_WDTCPU0CON0           *ABS*    *ABS*         *ABS*                       *ABS*
-0xf0036104 0xf0036104     0 l SCU_WDTCPU0CON1           *ABS*    *ABS*         *ABS*                       *ABS*
+=====================================================================================================================================================================================================================
+Start      End         Size S Name                       Memory      O-Sec         I-Sec                            Input object                                                                                     
+=====================================================================================================================================================================================================================
+0x00000400 0x00000400     0 g __ISTACK_SIZE              *ABS*       *ABS*         *ABS*                            *ABS*
+0x00001000 0x00001000     0 g __HEAP_SIZE                *ABS*       *ABS*         *ABS*                            *ABS*
+0x00001000 0x00001000     0 g __USTACK_SIZE              *ABS*       *ABS*         *ABS*                            *ABS*
+0x00002700 0x00002700     0 g __TRICORE_DERIVATE_NAME__  *ABS*       *ABS*         *ABS*                            *ABS*
+0x00004000 0x00004000     0 g __CSA_SIZE                 *ABS*       *ABS*         *ABS*                            *ABS*
+0x00004000 0x00004000     0 g __PMU_DFLASH0_1_SIZE       *ABS*       *ABS*         *ABS*                            *ABS*
+0x00006000 0x00006000     0 g __PMI_PSPR_SIZE            *ABS*       *ABS*         *ABS*                            *ABS*
+0x00008000 0x00008000     0 g __BROM_SIZE                *ABS*       *ABS*         *ABS*                            *ABS*
+0x00008000 0x00008000     0 g __LMU_SRAM_SIZE            *ABS*       *ABS*         *ABS*                            *ABS*
+0x0000fe00 0x0000fe00     0 l $pcxi                      *ABS*       *ABS*         *ABS*                            *ABS*
+0x0000fe04 0x0000fe04     0 l $psw                       *ABS*       *ABS*         *ABS*                            *ABS*
+0x0000fe1c 0x0000fe1c     0 l CORE_ID                    *ABS*       *ABS*         *ABS*                            *ABS*
+0x0000fe28 0x0000fe28     0 l $isp                       *ABS*       *ABS*         *ABS*                            *ABS*
+0x0000fe38 0x0000fe38     0 l $fcx                       *ABS*       *ABS*         *ABS*                            *ABS*
+0x0000fe3c 0x0000fe3c     0 l $lcx                       *ABS*       *ABS*         *ABS*                            *ABS*
+0x00010000 0x00010000     0 g __PMU_DFLASH1_SIZE         *ABS*       *ABS*         *ABS*                            *ABS*
+0x0001c000 0x0001c000     0 g __DMI_DSPR_SIZE            *ABS*       *ABS*         *ABS*                            *ABS*
+0x00100000 0x00100000     0 g __PMU_DFLASH0_SIZE         *ABS*       *ABS*         *ABS*                            *ABS*
+0x00200000 0x00200000     0 g __PMU_PFLASH0_SIZE         *ABS*       *ABS*         *ABS*                            *ABS*
+0x00200000 0x00200000     0 g __PMU_PFLASH1_SIZE         *ABS*       *ABS*         *ABS*                            *ABS*
+0x80000000 0x80000000     0 g __PMU_PFLASH0_BEGIN        *ABS*       *ABS*         *ABS*                            *ABS*
+0x80000020 0x80000020     0 g _start                     PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000024 0x80000024     0 l _startaddr                 PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000040 0x80000040     0 l do_endinit_cpuN            PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000004c 0x8000004c     0 l endinit_done_cpuN          PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000054 0x80000054     0 l do_endinit_s               PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000066 0x80000066     0 l endinit_done_s             PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000072 0x80000072     0 l init_stack_pointers        PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x800000f2 0x800000f2     0 l disable_safety_wdt         PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000116 0x80000116     0 l jump_to_remapped           PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000122 0x80000122     0 l __remapped                 PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000015e 0x8000015e     0 l asm_clear_endinit_xx       PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000017e 0x8000017e     0 l asm_set_endinit_xx         PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000019e 0x8000019e     0 g __init_csa                 PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x800001ee 0x800001ee     0 l csa_loop                   PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000212 0x80000212     0 g __clear_table_func         PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000021e 0x8000021e     0 l __clear_table_next         PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000236 0x80000236     0 l __clear_dword              PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000023c 0x8000023c     0 l __clear_word               PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000024c 0x8000024c     0 l __clear_hword              PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000025c 0x8000025c     0 l __clear_byte               PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000264 0x80000264     0 l __clear_table_done         PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000266 0x80000266     0 g __copy_table_func          PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000026e 0x8000026e     0 l __copy_table_next          PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000288 0x80000288     0 l __copy_dword               PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000292 0x80000292     0 l __copy_word                PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x800002a4 0x800002a4     0 l __copy_hword               PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x800002b6 0x800002b6     0 l __copy_byte                PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x800002c2 0x800002c2     0 l __copy_table_done          PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x800002cc 0x800003e3   280 g main                       PMU_PFLASH0 .text         .text                            src\hello.o
+0x800003e6 0x800003e6     0 l __do_global_dtors_aux      PMU_PFLASH0 .text         .text.__do_global_dtors_aux      c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0x80000430 0x80000430     0 l call___do_global_dtors_aux PMU_PFLASH0 .text         .text.call___do_global_dtors_aux c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0x80000430 0x80000430     0 l frame_dummy                PMU_PFLASH0 .text         .text.frame_dummy                c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0x8000044c 0x8000045b    16 g _exit                      PMU_PFLASH0 .text         .text._exit                      libos_exit.o
+0x8000044c 0x8000044c     0 l call_frame_dummy           PMU_PFLASH0 .text         .text.call_frame_dummy           c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0x8000045c 0x8000045c     0 l __do_global_ctors_aux      PMU_PFLASH0 .text         .text.__do_global_ctors_aux      c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+0x80000476 0x80000476     0 l call___do_global_ctors_aux PMU_PFLASH0 .text         .text.call___do_global_ctors_aux c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+0x80000478 0x80000478     0 g _init                      PMU_PFLASH0 .init         .init                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
+0x80000488 0x80000488     0 g _fini                      PMU_PFLASH0 .fini         .fini                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
+0x80000490 0x80000787   760 l Can_kTxHwObjectConfig_0    PMU_PFLASH0 .rodata       .rodata                          src\hello.o
+0x80000798 0x80000798     0 g __CTOR_LIST__              PMU_PFLASH0 .ctors        .ctors                           Test.elf
+0x8000079c 0x8000079c     0 l __CTOR_LIST__              PMU_PFLASH0 .ctors        .ctors                           c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0x800007a0 0x800007a0     0 l __CTOR_END__               PMU_PFLASH0 .ctors        .ctors                           c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+0x800007a8 0x800007a8     0 g __CTOR_END__               PMU_PFLASH0 .ctors        .ctors                           Test.elf
+0x800007a8 0x800007a8     0 g __DTOR_LIST__              PMU_PFLASH0 .dtors        .dtors                           Test.elf
+0x800007ac 0x800007ac     0 l __DTOR_LIST__              PMU_PFLASH0 .dtors        .dtors                           c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0x800007b8 0x800007b8     0 g __DTOR_END__               PMU_PFLASH0 .dtors        .dtors                           Test.elf
+0x800007b8 0x800007b8     0 g __clear_table              PMU_PFLASH0 .clear_sec    .clear_sec                       Test.elf
+0x800007e0 0x800007e0     0 g __copy_table               PMU_PFLASH0 .copy_sec     .copy_sec                        Test.elf
+0x80200000 0x80200000     0 g __PMU_PFLASH1_BEGIN        *ABS*       *ABS*         *ABS*                            *ABS*
+0x8fff8000 0x8fff8000     0 g __BROM_BEGIN               *ABS*       *ABS*         *ABS*                            *ABS*
+0x90000000 0x90000000     0 g __LMU_SRAM_BEGIN           *ABS*       *ABS*         *ABS*                            *ABS*
+0xaf000000 0xaf000000     0 g __PMU_DFLASH0_BEGIN        *ABS*       *ABS*         *ABS*                            *ABS*
+0xaf100000 0xaf100000     0 g __PMU_DFLASH0_1_BEGIN      *ABS*       *ABS*         *ABS*                            *ABS*
+0xaf110000 0xaf110000     0 g __PMU_DFLASH1_BEGIN        *ABS*       *ABS*         *ABS*                            *ABS*
+0xc0000000 0xc0000000     0 l __JCR_END__                PMI_PSPR    .jcr          .jcr                             c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+0xc0000000 0xc0000000     0 l __JCR_LIST__               PMI_PSPR    .jcr          .jcr                             c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0xc0000000 0xc0000000     0 g __PMI_PSPR_BEGIN           *ABS*       *ABS*         *ABS*                            *ABS*
+0xd0000000 0xd0000000     0 g __DMI_DSPR_BEGIN           *ABS*       *ABS*         *ABS*                            *ABS*
+0xd0000000 0xd0000000     0 l force_to_data              DMI_DSPR    .data         .data                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0xd0000004 0xd0000004     0 g __dso_handle               DMI_DSPR    .data         .data                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0xd0000008 0xd0000008     0 l force_to_data              DMI_DSPR    .data         .data                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+0xd0000010 0xd0000010     0 l completed.3082             DMI_DSPR    .bss          .bss                             c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0xd0000014 0xd0000014     0 l dtor_idx.3084              DMI_DSPR    .bss          .bss                             c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0xd0000018 0xd0000217   512 g testU8xxxxyyy              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0000218 0xd0000417   512 g testU8xxxx                 DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0000418 0xd0008b57 34624 g TestStruct5Var             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0008b58 0xd000ba37 12000 l TestVarArrayUint163d       DMI_DSPR    .bss          .bss                             src\hello.o
+0xd000ba38 0xd00117f7 24000 g TestVarArray3d             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00117f8 0xd0011b17   800 g TestVarArray2d             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b18 0xd0011b3f    40 g TestVarArray1d             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b40 0xd0011b67    40 g TestVarArrayFloat32        DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b68 0xd0011b8f    40 g TestVarArrayUint32         DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b90 0xd0011b93     4 g TestVarFloat2              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b94 0xd0011b97     4 g TestVarFloat1              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b98 0xd0011b9b     4 g TestVaru32_3               DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b9c 0xd0011b9f     4 g TestVaru32_2               DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011ba0 0xd0011ba3     4 g TestVaru32_1               DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011ba4 0xd0011c23   128 g TestStructVar2             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011c24 0xd0012063  1088 g TestStructArrayVar1        DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0012064 0xd0012563  1280 g TestStructVar1Array        DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0012564 0xd00125e3   128 g TestStructVar1             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00125e8 0xd00125eb     4 g __progname                 DMI_DSPR    .bss          .bss                             libos_exit.o
+0xd00125f0 0xd00125f0     0 g __USTACK_BEGIN             DMI_DSPR    .ustack       .ustack                          Test.elf
+0xd00135f0 0xd00135f0     0 g __ISTACK_BEGIN             DMI_DSPR    .istack       .istack                          Test.elf
+0xd00135f0 0xd00135f0     0 g __USTACK                   DMI_DSPR    .ustack       .ustack                          Test.elf
+0xd00135f0 0xd00135f0     0 g __USTACK_END               DMI_DSPR    .ustack       .ustack                          Test.elf
+0xd00139f0 0xd00139f0     0 g __HEAP                     DMI_DSPR    .heap         .heap                            Test.elf
+0xd00139f0 0xd00139f0     0 g __HEAP_BEGIN               DMI_DSPR    .heap         .heap                            Test.elf
+0xd00139f0 0xd00139f0     0 g __ISTACK                   DMI_DSPR    .istack       .istack                          Test.elf
+0xd00139f0 0xd00139f0     0 g __ISTACK_END               DMI_DSPR    .istack       .istack                          Test.elf
+0xd00149f0 0xd00149f0     0 g __HEAP_END                 DMI_DSPR    .heap         .heap                            Test.elf
+0xd0014a00 0xd0014a00     0 g __CSA                      DMI_DSPR    .csa          .csa                             Test.elf
+0xd0014a00 0xd0014a00     0 g __CSA_BEGIN                DMI_DSPR    .csa          .csa                             Test.elf
+0xd0018a00 0xd0018a00     0 g __CSA_END                  DMI_DSPR    .csa          .csa                             Test.elf
+0xf00360f0 0xf00360f0     0 l SCU_WDTSCON0               *ABS*       *ABS*         *ABS*                            *ABS*
+0xf00360f4 0xf00360f4     0 l SCU_WDTSCON1               *ABS*       *ABS*         *ABS*                            *ABS*
+0xf0036100 0xf0036100     0 l SCU_WDTCPU0CON0            *ABS*       *ABS*         *ABS*                            *ABS*
+0xf0036104 0xf0036104     0 l SCU_WDTCPU0CON1            *ABS*       *ABS*         *ABS*                            *ABS*
 
 >>> Symbols (global (S = g) and static (S = l); sorted by name)
 
-============================================================================================================================================================================================================
-Start      End         Size S Name                      Memory   O-Sec         I-Sec                       Input object                                                                                     
-============================================================================================================================================================================================================
-0x0000fe38 0x0000fe38     0 l $fcx                      *ABS*    *ABS*         *ABS*                       *ABS*
-0x0000fe28 0x0000fe28     0 l $isp                      *ABS*    *ABS*         *ABS*                       *ABS*
-0x0000fe3c 0x0000fe3c     0 l $lcx                      *ABS*    *ABS*         *ABS*                       *ABS*
-0x0000fe00 0x0000fe00     0 l $pcxi                     *ABS*    *ABS*         *ABS*                       *ABS*
-0x0000fe04 0x0000fe04     0 l $psw                      *ABS*    *ABS*         *ABS*                       *ABS*
-0x0000fe1c 0x0000fe1c     0 l CORE_ID                   *ABS*    *ABS*         *ABS*                       *ABS*
-0xf0036100 0xf0036100     0 l SCU_WDTCPU0CON0           *ABS*    *ABS*         *ABS*                       *ABS*
-0xf0036104 0xf0036104     0 l SCU_WDTCPU0CON1           *ABS*    *ABS*         *ABS*                       *ABS*
-0xf00360f0 0xf00360f0     0 l SCU_WDTSCON0              *ABS*    *ABS*         *ABS*                       *ABS*
-0xf00360f4 0xf00360f4     0 l SCU_WDTSCON1              *ABS*    *ABS*         *ABS*                       *ABS*
-0xd0000008 0xd0008747 34624 g TestStruct5Var            DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011814 0xd0011c53  1088 g TestStructArrayVar1       DMI_DSPR .bss          .bss                        src/hello.o
-0xd0012154 0xd00121d3   128 g TestStructVar1            DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011c54 0xd0012153  1280 g TestStructVar1Array       DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011794 0xd0011813   128 g TestStructVar2            DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011708 0xd001172f    40 g TestVarArray1d            DMI_DSPR .bss          .bss                        src/hello.o
-0xd00113e8 0xd0011707   800 g TestVarArray2d            DMI_DSPR .bss          .bss                        src/hello.o
-0xd000b628 0xd00113e7 24000 g TestVarArray3d            DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011730 0xd0011757    40 g TestVarArrayFloat32       DMI_DSPR .bss          .bss                        src/hello.o
-0xd0008748 0xd000b627 12000 g TestVarArrayUint163d      DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011758 0xd001177f    40 g TestVarArrayUint32        DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011784 0xd0011787     4 g TestVarFloat1             DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011780 0xd0011783     4 g TestVarFloat2             DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011790 0xd0011793     4 g TestVaru32_1              DMI_DSPR .bss          .bss                        src/hello.o
-0xd001178c 0xd001178f     4 g TestVaru32_2              DMI_DSPR .bss          .bss                        src/hello.o
-0xd0011788 0xd001178b     4 g TestVaru32_3              DMI_DSPR .bss          .bss                        src/hello.o
-0x8fff8000 0x8fff8000     0 g __BROM_BEGIN              *ABS*    *ABS*         *ABS*                       *ABS*
-0x00008000 0x00008000     0 g __BROM_SIZE               *ABS*    *ABS*         *ABS*                       *ABS*
-0xd0014600 0xd0014600     0 g __CSA                     DMI_DSPR .csa          .csa                        Test.elf
-0xd0014600 0xd0014600     0 g __CSA_BEGIN               DMI_DSPR .csa          .csa                        Test.elf
-0xd0018600 0xd0018600     0 g __CSA_END                 DMI_DSPR .csa          .csa                        Test.elf
-0x00004000 0x00004000     0 g __CSA_SIZE                *ABS*    *ABS*         *ABS*                       *ABS*
-0xc0000478 0xc0000478     0 g __CTOR_END__              PMI_PSPR .ctors        .ctors                      Test.elf
-0xc0000470 0xc0000470     0 l __CTOR_END__              PMI_PSPR .ctors        .ctors                      c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
-0xc0000468 0xc0000468     0 g __CTOR_LIST__             PMI_PSPR .ctors        .ctors                      Test.elf
-0xc000046c 0xc000046c     0 l __CTOR_LIST__             PMI_PSPR .ctors        .ctors                      c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xd0000000 0xd0000000     0 g __DMI_DSPR_BEGIN          *ABS*    *ABS*         *ABS*                       *ABS*
-0x0001c000 0x0001c000     0 g __DMI_DSPR_SIZE           *ABS*    *ABS*         *ABS*                       *ABS*
-0xc0000488 0xc0000488     0 g __DTOR_END__              PMI_PSPR .dtors        .dtors                      Test.elf
-0xc0000478 0xc0000478     0 g __DTOR_LIST__             PMI_PSPR .dtors        .dtors                      Test.elf
-0xc000047c 0xc000047c     0 l __DTOR_LIST__             PMI_PSPR .dtors        .dtors                      c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xd00135d8 0xd00135d8     0 g __HEAP                    DMI_DSPR .heap         .heap                       Test.elf
-0xd00135d8 0xd00135d8     0 g __HEAP_BEGIN              DMI_DSPR .heap         .heap                       Test.elf
-0xd00145d8 0xd00145d8     0 g __HEAP_END                DMI_DSPR .heap         .heap                       Test.elf
-0x00001000 0x00001000     0 g __HEAP_SIZE               *ABS*    *ABS*         *ABS*                       *ABS*
-0xd00135d8 0xd00135d8     0 g __ISTACK                  DMI_DSPR .istack       .istack                     Test.elf
-0xd00131d8 0xd00131d8     0 g __ISTACK_BEGIN            DMI_DSPR .istack       .istack                     Test.elf
-0xd00135d8 0xd00135d8     0 g __ISTACK_END              DMI_DSPR .istack       .istack                     Test.elf
-0x00000400 0x00000400     0 g __ISTACK_SIZE             *ABS*    *ABS*         *ABS*                       *ABS*
-0xc0000468 0xc0000468     0 l __JCR_LIST__              PMI_PSPR .jcr          .jcr                        c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0x90000000 0x90000000     0 g __LMU_SRAM_BEGIN          *ABS*    *ABS*         *ABS*                       *ABS*
-0x00008000 0x00008000     0 g __LMU_SRAM_SIZE           *ABS*    *ABS*         *ABS*                       *ABS*
-0xc0000000 0xc0000000     0 g __PMI_PSPR_BEGIN          *ABS*    *ABS*         *ABS*                       *ABS*
-0x00006000 0x00006000     0 g __PMI_PSPR_SIZE           *ABS*    *ABS*         *ABS*                       *ABS*
-0xaf100000 0xaf100000     0 g __PMU_DFLASH0_1_BEGIN     *ABS*    *ABS*         *ABS*                       *ABS*
-0x00004000 0x00004000     0 g __PMU_DFLASH0_1_SIZE      *ABS*    *ABS*         *ABS*                       *ABS*
-0xaf000000 0xaf000000     0 g __PMU_DFLASH0_BEGIN       *ABS*    *ABS*         *ABS*                       *ABS*
-0x00100000 0x00100000     0 g __PMU_DFLASH0_SIZE        *ABS*    *ABS*         *ABS*                       *ABS*
-0xaf110000 0xaf110000     0 g __PMU_DFLASH1_BEGIN       *ABS*    *ABS*         *ABS*                       *ABS*
-0x00010000 0x00010000     0 g __PMU_DFLASH1_SIZE        *ABS*    *ABS*         *ABS*                       *ABS*
-0x80000000 0x80000000     0 g __PMU_PFLASH0_BEGIN       *ABS*    *ABS*         *ABS*                       *ABS*
-0x00200000 0x00200000     0 g __PMU_PFLASH0_SIZE        *ABS*    *ABS*         *ABS*                       *ABS*
-0x80200000 0x80200000     0 g __PMU_PFLASH1_BEGIN       *ABS*    *ABS*         *ABS*                       *ABS*
-0x00200000 0x00200000     0 g __PMU_PFLASH1_SIZE        *ABS*    *ABS*         *ABS*                       *ABS*
-0x00002700 0x00002700     0 g __TRICORE_DERIVATE_NAME__ *ABS*    *ABS*         *ABS*                       *ABS*
-0xd00131d8 0xd00131d8     0 g __USTACK                  DMI_DSPR .ustack       .ustack                     Test.elf
-0xd00121d8 0xd00121d8     0 g __USTACK_BEGIN            DMI_DSPR .ustack       .ustack                     Test.elf
-0xd00131d8 0xd00131d8     0 g __USTACK_END              DMI_DSPR .ustack       .ustack                     Test.elf
-0x00001000 0x00001000     0 g __USTACK_SIZE             *ABS*    *ABS*         *ABS*                       *ABS*
-0xc000025c 0xc000025c     0 l __clear_byte              PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000236 0xc0000236     0 l __clear_dword             PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000024c 0xc000024c     0 l __clear_hword             PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000488 0xc0000488     0 g __clear_table             PMI_PSPR .clear_sec    .clear_sec                  Test.elf
-0xc0000264 0xc0000264     0 l __clear_table_done        PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000212 0xc0000212     0 g __clear_table_func        PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000021e 0xc000021e     0 l __clear_table_next        PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000023c 0xc000023c     0 l __clear_word              PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc00002b6 0xc00002b6     0 l __copy_byte               PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000288 0xc0000288     0 l __copy_dword              PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc00002a4 0xc00002a4     0 l __copy_hword              PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc00004b0 0xc00004b0     0 g __copy_table              PMI_PSPR .copy_sec     .copy_sec                   Test.elf
-0xc00002c2 0xc00002c2     0 l __copy_table_done         PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000266 0xc0000266     0 g __copy_table_func         PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000026e 0xc000026e     0 l __copy_table_next         PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000292 0xc0000292     0 l __copy_word               PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000432 0xc0000432     0 l __do_global_ctors_aux     PMI_PSPR .text         .text.__do_global_ctors_aux c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
-0xc00003bc 0xc00003bc     0 l __do_global_dtors_aux     PMI_PSPR .text         .text.__do_global_dtors_aux c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xc000019e 0xc000019e     0 g __init_csa                PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000122 0xc0000122     0 l __remapped                PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000422 0xc0000431    16 g _exit                     PMI_PSPR .text         .text._exit                 libos_exit.o
-0xc0000460 0xc0000460     0 g _fini                     PMI_PSPR .fini         .fini                       c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
-0xc0000450 0xc0000450     0 g _init                     PMI_PSPR .init         .init                       c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
-0xc0000020 0xc0000020     0 g _start                    PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000024 0xc0000024     0 l _startaddr                PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000015e 0xc000015e     0 l asm_clear_endinit_xx      PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc000017e 0xc000017e     0 l asm_set_endinit_xx        PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xd0000000 0xd0000000     0 l completed.3082            DMI_DSPR .bss          .bss                        c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xc00001ee 0xc00001ee     0 l csa_loop                  PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc00000f2 0xc00000f2     0 l disable_safety_wdt        PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000040 0xc0000040     0 l do_endinit_cpuN           PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000054 0xc0000054     0 l do_endinit_s              PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xd0000004 0xd0000004     0 l dtor_idx.3084             DMI_DSPR .bss          .bss                        c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xc000004c 0xc000004c     0 l endinit_done_cpuN         PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000066 0xc0000066     0 l endinit_done_s            PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000406 0xc0000406     0 l frame_dummy               PMI_PSPR .text         .text.frame_dummy           c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xc0000072 0xc0000072     0 l init_stack_pointers       PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc0000116 0xc0000116     0 l jump_to_remapped          PMI_PSPR .startup_code .startup_code               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xc00002c8 0xc00003bb   244 g main                      PMI_PSPR .text         .text                       src/hello.o
+=====================================================================================================================================================================================================================
+Start      End         Size S Name                       Memory      O-Sec         I-Sec                            Input object                                                                                     
+=====================================================================================================================================================================================================================
+0x0000fe38 0x0000fe38     0 l $fcx                       *ABS*       *ABS*         *ABS*                            *ABS*
+0x0000fe28 0x0000fe28     0 l $isp                       *ABS*       *ABS*         *ABS*                            *ABS*
+0x0000fe3c 0x0000fe3c     0 l $lcx                       *ABS*       *ABS*         *ABS*                            *ABS*
+0x0000fe00 0x0000fe00     0 l $pcxi                      *ABS*       *ABS*         *ABS*                            *ABS*
+0x0000fe04 0x0000fe04     0 l $psw                       *ABS*       *ABS*         *ABS*                            *ABS*
+0x0000fe1c 0x0000fe1c     0 l CORE_ID                    *ABS*       *ABS*         *ABS*                            *ABS*
+0x80000490 0x80000787   760 l Can_kTxHwObjectConfig_0    PMU_PFLASH0 .rodata       .rodata                          src\hello.o
+0xf0036100 0xf0036100     0 l SCU_WDTCPU0CON0            *ABS*       *ABS*         *ABS*                            *ABS*
+0xf0036104 0xf0036104     0 l SCU_WDTCPU0CON1            *ABS*       *ABS*         *ABS*                            *ABS*
+0xf00360f0 0xf00360f0     0 l SCU_WDTSCON0               *ABS*       *ABS*         *ABS*                            *ABS*
+0xf00360f4 0xf00360f4     0 l SCU_WDTSCON1               *ABS*       *ABS*         *ABS*                            *ABS*
+0xd0000418 0xd0008b57 34624 g TestStruct5Var             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011c24 0xd0012063  1088 g TestStructArrayVar1        DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0012564 0xd00125e3   128 g TestStructVar1             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0012064 0xd0012563  1280 g TestStructVar1Array        DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011ba4 0xd0011c23   128 g TestStructVar2             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b18 0xd0011b3f    40 g TestVarArray1d             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00117f8 0xd0011b17   800 g TestVarArray2d             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd000ba38 0xd00117f7 24000 g TestVarArray3d             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b40 0xd0011b67    40 g TestVarArrayFloat32        DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0008b58 0xd000ba37 12000 l TestVarArrayUint163d       DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b68 0xd0011b8f    40 g TestVarArrayUint32         DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b94 0xd0011b97     4 g TestVarFloat1              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b90 0xd0011b93     4 g TestVarFloat2              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011ba0 0xd0011ba3     4 g TestVaru32_1               DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b9c 0xd0011b9f     4 g TestVaru32_2               DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0011b98 0xd0011b9b     4 g TestVaru32_3               DMI_DSPR    .bss          .bss                             src\hello.o
+0x8fff8000 0x8fff8000     0 g __BROM_BEGIN               *ABS*       *ABS*         *ABS*                            *ABS*
+0x00008000 0x00008000     0 g __BROM_SIZE                *ABS*       *ABS*         *ABS*                            *ABS*
+0xd0014a00 0xd0014a00     0 g __CSA                      DMI_DSPR    .csa          .csa                             Test.elf
+0xd0014a00 0xd0014a00     0 g __CSA_BEGIN                DMI_DSPR    .csa          .csa                             Test.elf
+0xd0018a00 0xd0018a00     0 g __CSA_END                  DMI_DSPR    .csa          .csa                             Test.elf
+0x00004000 0x00004000     0 g __CSA_SIZE                 *ABS*       *ABS*         *ABS*                            *ABS*
+0x800007a8 0x800007a8     0 g __CTOR_END__               PMU_PFLASH0 .ctors        .ctors                           Test.elf
+0x800007a0 0x800007a0     0 l __CTOR_END__               PMU_PFLASH0 .ctors        .ctors                           c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+0x80000798 0x80000798     0 g __CTOR_LIST__              PMU_PFLASH0 .ctors        .ctors                           Test.elf
+0x8000079c 0x8000079c     0 l __CTOR_LIST__              PMU_PFLASH0 .ctors        .ctors                           c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0xd0000000 0xd0000000     0 g __DMI_DSPR_BEGIN           *ABS*       *ABS*         *ABS*                            *ABS*
+0x0001c000 0x0001c000     0 g __DMI_DSPR_SIZE            *ABS*       *ABS*         *ABS*                            *ABS*
+0x800007b8 0x800007b8     0 g __DTOR_END__               PMU_PFLASH0 .dtors        .dtors                           Test.elf
+0x800007a8 0x800007a8     0 g __DTOR_LIST__              PMU_PFLASH0 .dtors        .dtors                           Test.elf
+0x800007ac 0x800007ac     0 l __DTOR_LIST__              PMU_PFLASH0 .dtors        .dtors                           c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0xd00139f0 0xd00139f0     0 g __HEAP                     DMI_DSPR    .heap         .heap                            Test.elf
+0xd00139f0 0xd00139f0     0 g __HEAP_BEGIN               DMI_DSPR    .heap         .heap                            Test.elf
+0xd00149f0 0xd00149f0     0 g __HEAP_END                 DMI_DSPR    .heap         .heap                            Test.elf
+0x00001000 0x00001000     0 g __HEAP_SIZE                *ABS*       *ABS*         *ABS*                            *ABS*
+0xd00139f0 0xd00139f0     0 g __ISTACK                   DMI_DSPR    .istack       .istack                          Test.elf
+0xd00135f0 0xd00135f0     0 g __ISTACK_BEGIN             DMI_DSPR    .istack       .istack                          Test.elf
+0xd00139f0 0xd00139f0     0 g __ISTACK_END               DMI_DSPR    .istack       .istack                          Test.elf
+0x00000400 0x00000400     0 g __ISTACK_SIZE              *ABS*       *ABS*         *ABS*                            *ABS*
+0xc0000000 0xc0000000     0 l __JCR_END__                PMI_PSPR    .jcr          .jcr                             c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+0xc0000000 0xc0000000     0 l __JCR_LIST__               PMI_PSPR    .jcr          .jcr                             c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0x90000000 0x90000000     0 g __LMU_SRAM_BEGIN           *ABS*       *ABS*         *ABS*                            *ABS*
+0x00008000 0x00008000     0 g __LMU_SRAM_SIZE            *ABS*       *ABS*         *ABS*                            *ABS*
+0xc0000000 0xc0000000     0 g __PMI_PSPR_BEGIN           *ABS*       *ABS*         *ABS*                            *ABS*
+0x00006000 0x00006000     0 g __PMI_PSPR_SIZE            *ABS*       *ABS*         *ABS*                            *ABS*
+0xaf100000 0xaf100000     0 g __PMU_DFLASH0_1_BEGIN      *ABS*       *ABS*         *ABS*                            *ABS*
+0x00004000 0x00004000     0 g __PMU_DFLASH0_1_SIZE       *ABS*       *ABS*         *ABS*                            *ABS*
+0xaf000000 0xaf000000     0 g __PMU_DFLASH0_BEGIN        *ABS*       *ABS*         *ABS*                            *ABS*
+0x00100000 0x00100000     0 g __PMU_DFLASH0_SIZE         *ABS*       *ABS*         *ABS*                            *ABS*
+0xaf110000 0xaf110000     0 g __PMU_DFLASH1_BEGIN        *ABS*       *ABS*         *ABS*                            *ABS*
+0x00010000 0x00010000     0 g __PMU_DFLASH1_SIZE         *ABS*       *ABS*         *ABS*                            *ABS*
+0x80000000 0x80000000     0 g __PMU_PFLASH0_BEGIN        *ABS*       *ABS*         *ABS*                            *ABS*
+0x00200000 0x00200000     0 g __PMU_PFLASH0_SIZE         *ABS*       *ABS*         *ABS*                            *ABS*
+0x80200000 0x80200000     0 g __PMU_PFLASH1_BEGIN        *ABS*       *ABS*         *ABS*                            *ABS*
+0x00200000 0x00200000     0 g __PMU_PFLASH1_SIZE         *ABS*       *ABS*         *ABS*                            *ABS*
+0x00002700 0x00002700     0 g __TRICORE_DERIVATE_NAME__  *ABS*       *ABS*         *ABS*                            *ABS*
+0xd00135f0 0xd00135f0     0 g __USTACK                   DMI_DSPR    .ustack       .ustack                          Test.elf
+0xd00125f0 0xd00125f0     0 g __USTACK_BEGIN             DMI_DSPR    .ustack       .ustack                          Test.elf
+0xd00135f0 0xd00135f0     0 g __USTACK_END               DMI_DSPR    .ustack       .ustack                          Test.elf
+0x00001000 0x00001000     0 g __USTACK_SIZE              *ABS*       *ABS*         *ABS*                            *ABS*
+0x8000025c 0x8000025c     0 l __clear_byte               PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000236 0x80000236     0 l __clear_dword              PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000024c 0x8000024c     0 l __clear_hword              PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x800007b8 0x800007b8     0 g __clear_table              PMU_PFLASH0 .clear_sec    .clear_sec                       Test.elf
+0x80000264 0x80000264     0 l __clear_table_done         PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000212 0x80000212     0 g __clear_table_func         PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000021e 0x8000021e     0 l __clear_table_next         PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000023c 0x8000023c     0 l __clear_word               PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x800002b6 0x800002b6     0 l __copy_byte                PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000288 0x80000288     0 l __copy_dword               PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x800002a4 0x800002a4     0 l __copy_hword               PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x800007e0 0x800007e0     0 g __copy_table               PMU_PFLASH0 .copy_sec     .copy_sec                        Test.elf
+0x800002c2 0x800002c2     0 l __copy_table_done          PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000266 0x80000266     0 g __copy_table_func          PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000026e 0x8000026e     0 l __copy_table_next          PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000292 0x80000292     0 l __copy_word                PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000045c 0x8000045c     0 l __do_global_ctors_aux      PMU_PFLASH0 .text         .text.__do_global_ctors_aux      c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+0x800003e6 0x800003e6     0 l __do_global_dtors_aux      PMU_PFLASH0 .text         .text.__do_global_dtors_aux      c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0xd0000004 0xd0000004     0 g __dso_handle               DMI_DSPR    .data         .data                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0x8000019e 0x8000019e     0 g __init_csa                 PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0xd00125e8 0xd00125eb     4 g __progname                 DMI_DSPR    .bss          .bss                             libos_exit.o
+0x80000122 0x80000122     0 l __remapped                 PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000044c 0x8000045b    16 g _exit                      PMU_PFLASH0 .text         .text._exit                      libos_exit.o
+0x80000488 0x80000488     0 g _fini                      PMU_PFLASH0 .fini         .fini                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
+0x80000478 0x80000478     0 g _init                      PMU_PFLASH0 .init         .init                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
+0x80000020 0x80000020     0 g _start                     PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000024 0x80000024     0 l _startaddr                 PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000015e 0x8000015e     0 l asm_clear_endinit_xx       PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x8000017e 0x8000017e     0 l asm_set_endinit_xx         PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000476 0x80000476     0 l call___do_global_ctors_aux PMU_PFLASH0 .text         .text.call___do_global_ctors_aux c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+0x80000430 0x80000430     0 l call___do_global_dtors_aux PMU_PFLASH0 .text         .text.call___do_global_dtors_aux c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0x8000044c 0x8000044c     0 l call_frame_dummy           PMU_PFLASH0 .text         .text.call_frame_dummy           c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0xd0000010 0xd0000010     0 l completed.3082             DMI_DSPR    .bss          .bss                             c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0x800001ee 0x800001ee     0 l csa_loop                   PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x800000f2 0x800000f2     0 l disable_safety_wdt         PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000040 0x80000040     0 l do_endinit_cpuN            PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000054 0x80000054     0 l do_endinit_s               PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0xd0000014 0xd0000014     0 l dtor_idx.3084              DMI_DSPR    .bss          .bss                             c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0x8000004c 0x8000004c     0 l endinit_done_cpuN          PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000066 0x80000066     0 l endinit_done_s             PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0xd0000000 0xd0000000     0 l force_to_data              DMI_DSPR    .data         .data                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0xd0000008 0xd0000008     0 l force_to_data              DMI_DSPR    .data         .data                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+0x80000430 0x80000430     0 l frame_dummy                PMU_PFLASH0 .text         .text.frame_dummy                c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+0x80000072 0x80000072     0 l init_stack_pointers        PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x80000116 0x80000116     0 l jump_to_remapped           PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+0x800002cc 0x800003e3   280 g main                       PMU_PFLASH0 .text         .text                            src\hello.o
+0xd0000218 0xd0000417   512 g testU8xxxx                 DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0000018 0xd0000217   512 g testU8xxxxyyy              DMI_DSPR    .bss          .bss                             src\hello.o
 
 
 ----- END EXTENDED MAP LISTING -----
@@ -275,14 +269,14 @@ Start      End         Size S Name                      Memory   O-Sec         I
 Memory Configuration
 
 Name             Origin             Length             Used               Free               Attributes
-PMU_PFLASH0      0x80000000         0x00200000         0x00000000         0x00200000         xr !p
+PMU_PFLASH0      0x80000000         0x00200000         0x0000081c         0x001ff7e4         xr !p
 PMU_PFLASH1      0x80200000         0x00200000         0x00000000         0x00200000         xr !p
 PMU_DFLASH0      0xaf000000         0x00100000         0x00000000         0x00100000         r !xp
 PMU_DFLASH0_1    0xaf100000         0x00004000         0x00000000         0x00004000         r !xp
 PMU_DFLASH1      0xaf110000         0x00010000         0x00000000         0x00010000         r !xp
 BROM             0x8fff8000         0x00008000         0x00000000         0x00008000         xr !p
-PMI_PSPR         0xc0000000         0x00006000         0x000004ec         0x00005b14         xw !p
-DMI_DSPR         0xd0000000         0x0001c000         0x00018600         0x00003a00         w !xp
+PMI_PSPR         0xc0000000         0x00006000         0x00000004         0x00005ffc         xw !p
+DMI_DSPR         0xd0000000         0x0001c000         0x00018a00         0x00003600         w !xp
 LMU_SRAM         0x90000000         0x00008000         0x00000000         0x00008000         w !xp
 *default*        0x00000000         0xffffffff         0x00000046         0xffffffb9
 
@@ -291,7 +285,7 @@ Linker script and memory map
 LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
 LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
 LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-LOAD src/hello.o
+LOAD src\hello.o
 LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double\libgcc.a
 LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libdnk_c.a
 LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a
@@ -322,93 +316,105 @@ LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/s
                 [0x00001000]                __HEAP_SIZE = DEFINED (__HEAP_SIZE)?__HEAP_SIZE:0x1000
                 [0x00004000]                __CSA_SIZE = DEFINED (__CSA_SIZE)?__CSA_SIZE:0x4000
 
-.startup_code   memory region -> PMI_PSPR
-                0xc0000000      0x2c8
-                0xc0000000                PROVIDE (__startup_code_start, .)
+.startup_code   memory region -> PMU_PFLASH0
+                0x80000000      0x2c8
+                0x80000000                PROVIDE (__startup_code_start, .)
  *(.startup_code)
- .startup_code  0xc0000000      0x2c4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-                0xc0000020                _start
-                0xc000019e                __init_csa
-                0xc0000212                __clear_table_func
-                0xc0000266                __copy_table_func
+ .startup_code  0x80000000      0x2c4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+                0x80000020                _start
+                0x8000019e                __init_csa
+                0x80000212                __clear_table_func
+                0x80000266                __copy_table_func
  *(.startup_code*)
-                0xc00002c4                PROVIDE (__startup_code_end, .)
-                0xc00002c8                . = ALIGN (0x8)
- *fill*         0xc00002c4        0x4 00
+                0x800002c4                PROVIDE (__startup_code_end, .)
+                0x800002c8                . = ALIGN (0x8)
+ *fill*         0x800002c4        0x4 00
 
-.text           memory region -> PMI_PSPR
-                0xc00002c8      0x188
-                0xc00002c8                PROVIDE (__text_start, .)
+.text           memory region -> PMU_PFLASH0
+                0x800002c8      0x1b0
+                0x800002c8                PROVIDE (__text_start, .)
  *(.text)
- .text          0xc00002c8       0xf4 src/hello.o
-                0xc00002c8                main
+ .text          0x800002c8        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
+ .text          0x800002c8        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+ .text          0x800002cc        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+ .text          0x800002cc      0x118 src\hello.o
+                0x800002cc                main
+ .text          0x800003e4        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+ .text          0x800003e4        0x2 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+ .text          0x800003e6        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
  *(.text*)
  .text.__do_global_dtors_aux
-                0xc00003bc       0x4a c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+                0x800003e6       0x4a c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+ .text.call___do_global_dtors_aux
+                0x80000430        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
  .text.frame_dummy
-                0xc0000406       0x1c c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
- .text._exit    0xc0000422       0x10 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
-                0xc0000422                _exit
+                0x80000430       0x1c c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+ .text.call_frame_dummy
+                0x8000044c        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+ .text._exit    0x8000044c       0x10 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+                0x8000044c                _exit
  .text.__do_global_ctors_aux
-                0xc0000432       0x1a c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+                0x8000045c       0x1a c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+ .text.call___do_global_ctors_aux
+                0x80000476        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
  *(.gnu.linkonce.t.*)
-                0xc000044c                PROVIDE (__text_end, .)
-                0xc0000450                . = ALIGN (0x8)
- *fill*         0xc000044c        0x4 00
+                0x80000476                PROVIDE (__text_end, .)
+                0x80000478                . = ALIGN (0x8)
+ *fill*         0x80000476        0x2 00
 
-.init           memory region -> PMI_PSPR
-                0xc0000450       0x10
-                0xc0000450                PROVIDE (__init_start, .)
+.init           memory region -> PMU_PFLASH0
+                0x80000478       0x10
+                0x80000478                PROVIDE (__init_start, .)
  *(.init)
- .init          0xc0000450        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
-                0xc0000450                _init
- .init          0xc0000450        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
- .init          0xc0000454        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
- .init          0xc0000458        0x2 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
+ .init          0x80000478        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
+                0x80000478                _init
+ .init          0x80000478        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+ .init          0x8000047c        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+ .init          0x80000480        0x2 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
  *(.init*)
-                0xc000045a                PROVIDE (__init_end, .)
-                0xc0000460                . = ALIGN (0x8)
- *fill*         0xc000045a        0x6 00
+                0x80000482                PROVIDE (__init_end, .)
+                0x80000488                . = ALIGN (0x8)
+ *fill*         0x80000482        0x6 00
 
-.fini           memory region -> PMI_PSPR
-                0xc0000460        0x8
-                0xc0000460                PROVIDE (__fini_start, .)
+.fini           memory region -> PMU_PFLASH0
+                0x80000488        0x8
+                0x80000488                PROVIDE (__fini_start, .)
  *(.fini)
- .fini          0xc0000460        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
-                0xc0000460                _fini
- .fini          0xc0000460        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
- .fini          0xc0000464        0x2 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
+ .fini          0x80000488        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
+                0x80000488                _fini
+ .fini          0x80000488        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+ .fini          0x8000048c        0x2 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
  *(.fini*)
-                0xc0000466                PROVIDE (__fini_end, .)
-                0xc0000468                . = ALIGN (0x8)
- *fill*         0xc0000466        0x2 00
+                0x8000048e                PROVIDE (__fini_end, .)
+                0x80000490                . = ALIGN (0x8)
+ *fill*         0x8000048e        0x2 00
 
-.traptab        memory region -> PMI_PSPR
-                0xc0000468        0x0
-                0xc0000468                PROVIDE (__traptab_start, .)
+.traptab        memory region -> PMU_PFLASH0
+                0x80000490        0x0
+                0x80000490                PROVIDE (__traptab_start, .)
  *(.traptab)
  *(.traptab*)
-                0xc0000468                PROVIDE (__traptab_end, .)
-                0xc0000468                . = ALIGN (0x8)
+                0x80000490                PROVIDE (__traptab_end, .)
+                0x80000490                . = ALIGN (0x8)
 
-.inttab         memory region -> PMI_PSPR
-                0xc0000468        0x0
-                0xc0000468                PROVIDE (__inttab_start, .)
+.inttab         memory region -> PMU_PFLASH0
+                0x80000490        0x0
+                0x80000490                PROVIDE (__inttab_start, .)
  *(.inttab)
  *(.inttab*)
-                0xc0000468                PROVIDE (__inttab_end, .)
-                0xc0000468                . = ALIGN (0x8)
+                0x80000490                PROVIDE (__inttab_end, .)
+                0x80000490                . = ALIGN (0x8)
 
-.eh_frame       memory region -> PMI_PSPR
-                0xc0000468        0x0
-                0xc0000468                PROVIDE (__eh_frame_start, .)
+.eh_frame       memory region -> PMU_PFLASH0
+                0x80000490        0x0
+                0x80000490                PROVIDE (__eh_frame_start, .)
  *(.eh_frame)
  *(.eh_frame*)
-                0xc0000468                PROVIDE (__eh_frame_end, .)
-                0xc0000468                . = ALIGN (0x8)
+                0x80000490                PROVIDE (__eh_frame_end, .)
+                0x80000490                . = ALIGN (0x8)
 
 .zdata          memory region -> DMI_DSPR
-                0xd0000000        0x0 load address 0xc0000468
+                0xd0000000        0x0 load address 0x80000490
                 0xd0000000                PROVIDE (__zdata_start, .)
  *(.zdata)
  *(.zdata*)
@@ -422,7 +428,7 @@ LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/s
                 0xd0000000                . = ALIGN (0x8)
 
 .zbss           memory region -> DMI_DSPR
-                0xd0000000        0x0 load address 0xc0000468
+                0xd0000000        0x0 load address 0x80000490
                 0xd0000000                PROVIDE (__zbss_start, .)
  *(.zbss)
  *(.zbss*)
@@ -431,7 +437,7 @@ LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/s
                 0xd0000000                . = ALIGN (0x8)
 
 .bbss           memory region -> DMI_DSPR
-                0xd0000000        0x0 load address 0xc0000468
+                0xd0000000        0x0 load address 0x80000490
                 0xd0000000                PROVIDE (__bbss_start, .)
  *(.bbss)
  *(.bbss*)
@@ -439,24 +445,24 @@ LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/s
                 0xd0000000                . = ALIGN (0x8)
 
 .bdata          memory region -> DMI_DSPR
-                0xd0000000        0x0 load address 0xc0000468
+                0xd0000000        0x0 load address 0x80000490
                 0xd0000000                PROVIDE (__bdata_start, .)
  *(.bdata)
  *(.bdata*)
                 0xd0000000                PROVIDE (__bdata_end, .)
                 0xd0000000                . = ALIGN (0x8)
 
-.sdata2         memory region -> PMI_PSPR
-                0xc0000468        0x0
-                0xc0000468                PROVIDE (__sdata2_start, .)
+.sdata2         memory region -> PMU_PFLASH0
+                0x80000490        0x0
+                0x80000490                PROVIDE (__sdata2_start, .)
  *(.sdata.rodata)
  *(.sdata.rodata*)
  *(.gnu.linkonce.sr.*)
-                0xc0000468                PROVIDE (__sdata2_end, .)
-                0xc0000468                . = ALIGN (0x8)
+                0x80000490                PROVIDE (__sdata2_end, .)
+                0x80000490                . = ALIGN (0x8)
 
 .sdata          memory region -> DMI_DSPR
-                0xd0000000        0x0 load address 0xc0000468
+                0xd0000000        0x0 load address 0x80000490
                 0xd0000000                PROVIDE (__sdata_start, .)
  *(.sdata)
  *(.sdata*)
@@ -465,7 +471,7 @@ LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/s
                 0xd0000000                . = ALIGN (0x8)
 
 .sbss           memory region -> DMI_DSPR
-                0xd0000000        0x0 load address 0xc0000468
+                0xd0000000        0x0 load address 0x80000490
                 0xd0000000                PROVIDE (__sbss_start, .)
  *(.sbss)
  *(.sbss*)
@@ -473,177 +479,194 @@ LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/s
                 0xd0000000                PROVIDE (__sbss_end, .)
                 0xd0000000                . = ALIGN (0x8)
 
-.rodata         memory region -> PMI_PSPR
-                0xc0000468        0x0
-                0xc0000468                PROVIDE (__rodata_start, .)
+.rodata         memory region -> PMU_PFLASH0
+                0x80000490      0x2f8
+                0x80000490                PROVIDE (__rodata_start, .)
  *(.rodata)
+ .rodata        0x80000490      0x2f8 src\hello.o
  *(.rodata*)
  *(.gnu.linkonce.r.*)
  *(.jcr.*)
-                0xc0000468                PROVIDE (__rodata_end, .)
-                0xc0000468                . = ALIGN (0x8)
+                0x80000788                PROVIDE (__rodata_end, .)
+                0x80000788                . = ALIGN (0x8)
 
 .data           memory region -> DMI_DSPR
-                0xd0000000        0x0 load address 0xc0000468
+                0xd0000000       0x10 load address 0x80000788
                 0xd0000000                PROVIDE (__data_start, .)
  *(.data)
+ .data          0xd0000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
+ .data          0xd0000000        0x8 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+                0xd0000004                __dso_handle
+ .data          0xd0000008        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+ .data          0xd0000008        0x0 src\hello.o
+ .data          0xd0000008        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+ .data          0xd0000008        0x8 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+ .data          0xd0000010        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
  *(.data*)
  *(.gnu.linkonce.d.*)
-                0xd0000000                PROVIDE (__data_end, .)
-                0xd0000000                . = ALIGN (0x8)
+                0xd0000010                PROVIDE (__data_end, .)
+                0xd0000010                . = ALIGN (0x8)
 
 .jcr            memory region -> PMI_PSPR
-                0xc0000468        0x0
- .jcr           0xc0000468        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+                0xc0000000        0x4
+ .jcr           0xc0000000        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+ .jcr           0xc0000000        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
 
 .bss            memory region -> DMI_DSPR
-                0xd0000000    0x121d8 load address 0xc0000468
-                0xd0000000                PROVIDE (__bss_start, .)
+                0xd0000010    0x125e0 load address 0x80000798
+                0xd0000010                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0xd0000000        0x8 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
- .bss           0xd0000008    0x121d0 src/hello.o
-                0xd0000008                TestStruct5Var
-                0xd0008748                TestVarArrayUint163d
-                0xd000b628                TestVarArray3d
-                0xd00113e8                TestVarArray2d
-                0xd0011708                TestVarArray1d
-                0xd0011730                TestVarArrayFloat32
-                0xd0011758                TestVarArrayUint32
-                0xd0011780                TestVarFloat2
-                0xd0011784                TestVarFloat1
-                0xd0011788                TestVaru32_3
-                0xd001178c                TestVaru32_2
-                0xd0011790                TestVaru32_1
-                0xd0011794                TestStructVar2
-                0xd0011814                TestStructArrayVar1
-                0xd0011c54                TestStructVar1Array
-                0xd0012154                TestStructVar1
+ .bss           0xd0000010        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
+ .bss           0xd0000010        0x8 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+ .bss           0xd0000018        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+ .bss           0xd0000018    0x125d0 src\hello.o
+                0xd0000018                testU8xxxxyyy
+                0xd0000218                testU8xxxx
+                0xd0000418                TestStruct5Var
+                0xd000ba38                TestVarArray3d
+                0xd00117f8                TestVarArray2d
+                0xd0011b18                TestVarArray1d
+                0xd0011b40                TestVarArrayFloat32
+                0xd0011b68                TestVarArrayUint32
+                0xd0011b90                TestVarFloat2
+                0xd0011b94                TestVarFloat1
+                0xd0011b98                TestVaru32_3
+                0xd0011b9c                TestVaru32_2
+                0xd0011ba0                TestVaru32_1
+                0xd0011ba4                TestStructVar2
+                0xd0011c24                TestStructArrayVar1
+                0xd0012064                TestStructVar1Array
+                0xd0012564                TestStructVar1
+ .bss           0xd00125e8        0x8 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+                0xd00125e8                __progname
+ .bss           0xd00125f0        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+ .bss           0xd00125f0        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
  *(.bss*)
  *(.gnu.linkonce.b.*)
-                0xd00121d8                PROVIDE (__bss_end, .)
-                0xd00121d8                . = ALIGN (0x8)
+                0xd00125f0                PROVIDE (__bss_end, .)
+                0xd00125f0                . = ALIGN (0x8)
 
-.pcptext        memory region -> PMI_PSPR
-                0xc0000468        0x0
-                0xc0000468                PROVIDE (__pcptext_start, .)
-                0xc0000468                PROVIDE (__pcptext_end, .)
-                0xc0000468                . = ALIGN (0x8)
+.pcptext        memory region -> PMU_PFLASH0
+                0x80000798        0x0
+                0x80000798                PROVIDE (__pcptext_start, .)
+                0x80000798                PROVIDE (__pcptext_end, .)
+                0x80000798                . = ALIGN (0x8)
 
-.pcpdata        memory region -> PMI_PSPR
-                0xc0000468        0x0
-                0xc0000468                PROVIDE (__pcpdata_start, .)
-                0xc0000468                PROVIDE (__pcpdata_end, .)
-                0xc0000468                . = ALIGN (0x8)
+.pcpdata        memory region -> PMU_PFLASH0
+                0x80000798        0x0
+                0x80000798                PROVIDE (__pcpdata_start, .)
+                0x80000798                PROVIDE (__pcpdata_end, .)
+                0x80000798                . = ALIGN (0x8)
 
-.ctors          memory region -> PMI_PSPR
-                0xc0000468       0x10
-                0xc0000468                __CTOR_LIST__ = .
-                0xc0000468        0x4 LONG 0x2 (((__CTOR_END__ - __CTOR_LIST__) / 0x4) - 0x2)
+.ctors          memory region -> PMU_PFLASH0
+                0x80000798       0x10
+                0x80000798                __CTOR_LIST__ = .
+                0x80000798        0x4 LONG 0x2 (((__CTOR_END__ - __CTOR_LIST__) / 0x4) - 0x2)
  *crtbegin.o(.ctors)
- .ctors         0xc000046c        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+ .ctors         0x8000079c        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
- .ctors         0xc0000470        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
-                0xc0000474        0x4 LONG 0x0
-                0xc0000478                __CTOR_END__ = .
-                0xc0000478                . = ALIGN (0x8)
+ .ctors         0x800007a0        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+                0x800007a4        0x4 LONG 0x0
+                0x800007a8                __CTOR_END__ = .
+                0x800007a8                . = ALIGN (0x8)
 
-.dtors          memory region -> PMI_PSPR
-                0xc0000478       0x10
-                0xc0000478                __DTOR_LIST__ = .
-                0xc0000478        0x4 LONG 0x2 (((__DTOR_END__ - __DTOR_LIST__) / 0x4) - 0x2)
+.dtors          memory region -> PMU_PFLASH0
+                0x800007a8       0x10
+                0x800007a8                __DTOR_LIST__ = .
+                0x800007a8        0x4 LONG 0x2 (((__DTOR_END__ - __DTOR_LIST__) / 0x4) - 0x2)
  *crtbegin.o(.dtors)
- .dtors         0xc000047c        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
+ .dtors         0x800007ac        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
- .dtors         0xc0000480        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
-                0xc0000484        0x4 LONG 0x0
-                0xc0000488                __DTOR_END__ = .
-                0xc0000488                . = ALIGN (0x8)
+ .dtors         0x800007b0        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+                0x800007b4        0x4 LONG 0x0
+                0x800007b8                __DTOR_END__ = .
+                0x800007b8                . = ALIGN (0x8)
 
-.clear_sec      memory region -> PMI_PSPR
-                0xc0000488       0x28
-                0xc0000488                . = ALIGN (0x8)
-                0xc0000488                PROVIDE (__clear_table, .)
-                0xc0000488        0x4 LONG 0xd0000000 (0x0 + ADDR (.bss))
-                0xc000048c        0x4 LONG 0x121d8 SIZEOF (.bss)
-                0xc0000490        0x4 LONG 0xd0000000 (0x0 + ADDR (.sbss))
-                0xc0000494        0x4 LONG 0x0 SIZEOF (.sbss)
-                0xc0000498        0x4 LONG 0xd0000000 (0x0 + ADDR (.zbss))
-                0xc000049c        0x4 LONG 0x0 SIZEOF (.zbss)
-                0xc00004a0        0x4 LONG 0xd0000000 (0x0 + ADDR (.bbss))
-                0xc00004a4        0x4 LONG 0x0 SIZEOF (.bbss)
-                0xc00004a8        0x4 LONG 0xffffffff
-                0xc00004ac        0x4 LONG 0xffffffff
+.clear_sec      memory region -> PMU_PFLASH0
+                0x800007b8       0x28
+                0x800007b8                . = ALIGN (0x8)
+                0x800007b8                PROVIDE (__clear_table, .)
+                0x800007b8        0x4 LONG 0xd0000010 (0x0 + ADDR (.bss))
+                0x800007bc        0x4 LONG 0x125e0 SIZEOF (.bss)
+                0x800007c0        0x4 LONG 0xd0000000 (0x0 + ADDR (.sbss))
+                0x800007c4        0x4 LONG 0x0 SIZEOF (.sbss)
+                0x800007c8        0x4 LONG 0xd0000000 (0x0 + ADDR (.zbss))
+                0x800007cc        0x4 LONG 0x0 SIZEOF (.zbss)
+                0x800007d0        0x4 LONG 0xd0000000 (0x0 + ADDR (.bbss))
+                0x800007d4        0x4 LONG 0x0 SIZEOF (.bbss)
+                0x800007d8        0x4 LONG 0xffffffff
+                0x800007dc        0x4 LONG 0xffffffff
 
-.copy_sec       memory region -> PMI_PSPR
-                0xc00004b0       0x3c
-                0xc00004b0                . = ALIGN (0x8)
-                0xc00004b0                PROVIDE (__copy_table, .)
-                0xc00004b0        0x4 LONG 0xc0000468 LOADADDR (.data)
-                0xc00004b4        0x4 LONG 0xd0000000 (0x0 + ADDR (.data))
-                0xc00004b8        0x4 LONG 0x0 SIZEOF (.data)
-                0xc00004bc        0x4 LONG 0xc0000468 LOADADDR (.sdata)
-                0xc00004c0        0x4 LONG 0xd0000000 (0x0 + ADDR (.sdata))
-                0xc00004c4        0x4 LONG 0x0 SIZEOF (.sdata)
-                0xc00004c8        0x4 LONG 0xc0000468 LOADADDR (.zdata)
-                0xc00004cc        0x4 LONG 0xd0000000 (0x0 + ADDR (.zdata))
-                0xc00004d0        0x4 LONG 0x0 SIZEOF (.zdata)
-                0xc00004d4        0x4 LONG 0xc0000468 LOADADDR (.bdata)
-                0xc00004d8        0x4 LONG 0xd0000000 (0x0 + ADDR (.bdata))
-                0xc00004dc        0x4 LONG 0x0 SIZEOF (.bdata)
-                0xc00004e0        0x4 LONG 0xffffffff
-                0xc00004e4        0x4 LONG 0xffffffff
-                0xc00004e8        0x4 LONG 0xffffffff
+.copy_sec       memory region -> PMU_PFLASH0
+                0x800007e0       0x3c
+                0x800007e0                . = ALIGN (0x8)
+                0x800007e0                PROVIDE (__copy_table, .)
+                0x800007e0        0x4 LONG 0x80000788 LOADADDR (.data)
+                0x800007e4        0x4 LONG 0xd0000000 (0x0 + ADDR (.data))
+                0x800007e8        0x4 LONG 0x10 SIZEOF (.data)
+                0x800007ec        0x4 LONG 0x80000490 LOADADDR (.sdata)
+                0x800007f0        0x4 LONG 0xd0000000 (0x0 + ADDR (.sdata))
+                0x800007f4        0x4 LONG 0x0 SIZEOF (.sdata)
+                0x800007f8        0x4 LONG 0x80000490 LOADADDR (.zdata)
+                0x800007fc        0x4 LONG 0xd0000000 (0x0 + ADDR (.zdata))
+                0x80000800        0x4 LONG 0x0 SIZEOF (.zdata)
+                0x80000804        0x4 LONG 0x80000490 LOADADDR (.bdata)
+                0x80000808        0x4 LONG 0xd0000000 (0x0 + ADDR (.bdata))
+                0x8000080c        0x4 LONG 0x0 SIZEOF (.bdata)
+                0x80000810        0x4 LONG 0xffffffff
+                0x80000814        0x4 LONG 0xffffffff
+                0x80000818        0x4 LONG 0xffffffff
 
 .ustack         memory region -> DMI_DSPR
-                0xd00121d8     0x1000
-                0xd00121d8                . = ALIGN (0x8)
-                0xd00121d8                __USTACK_BEGIN = .
-                0xd00131d8                . = (. + __USTACK_SIZE)
- *fill*         0xd00121d8     0x1000 00
-                0xd00131d8                . = ALIGN (0x8)
-                0xd00131d8                __USTACK = .
-                0xd00131d8                __USTACK_END = .
+                0xd00125f0     0x1000
+                0xd00125f0                . = ALIGN (0x8)
+                0xd00125f0                __USTACK_BEGIN = .
+                0xd00135f0                . = (. + __USTACK_SIZE)
+ *fill*         0xd00125f0     0x1000 00
+                0xd00135f0                . = ALIGN (0x8)
+                0xd00135f0                __USTACK = .
+                0xd00135f0                __USTACK_END = .
 
 .istack         memory region -> DMI_DSPR
-                0xd00131d8      0x400
-                0xd00131d8                . = ALIGN (0x8)
-                0xd00131d8                __ISTACK_BEGIN = .
-                0xd00135d8                . = (. + __ISTACK_SIZE)
- *fill*         0xd00131d8      0x400 00
-                0xd00135d8                . = ALIGN (0x8)
-                0xd00135d8                __ISTACK = .
-                0xd00135d8                __ISTACK_END = .
+                0xd00135f0      0x400
+                0xd00135f0                . = ALIGN (0x8)
+                0xd00135f0                __ISTACK_BEGIN = .
+                0xd00139f0                . = (. + __ISTACK_SIZE)
+ *fill*         0xd00135f0      0x400 00
+                0xd00139f0                . = ALIGN (0x8)
+                0xd00139f0                __ISTACK = .
+                0xd00139f0                __ISTACK_END = .
 
 .heap           memory region -> DMI_DSPR
-                0xd00135d8     0x1000
-                0xd00135d8                . = ALIGN (0x8)
-                0xd00135d8                __HEAP_BEGIN = .
-                0xd00135d8                __HEAP = .
-                0xd00145d8                . = (. + __HEAP_SIZE)
- *fill*         0xd00135d8     0x1000 00
-                0xd00145d8                . = ALIGN (0x8)
-                0xd00145d8                __HEAP_END = .
+                0xd00139f0     0x1000
+                0xd00139f0                . = ALIGN (0x8)
+                0xd00139f0                __HEAP_BEGIN = .
+                0xd00139f0                __HEAP = .
+                0xd00149f0                . = (. + __HEAP_SIZE)
+ *fill*         0xd00139f0     0x1000 00
+                0xd00149f0                . = ALIGN (0x8)
+                0xd00149f0                __HEAP_END = .
 
 .csa            memory region -> DMI_DSPR
-                0xd00145d8     0x4028
-                0xd0014600                . = ALIGN (0x40)
- *fill*         0xd00145d8       0x28 00
-                0xd0014600                __CSA_BEGIN = .
-                0xd0014600                __CSA = .
-                0xd0018600                . = (. + __CSA_SIZE)
- *fill*         0xd0014600     0x4000 00
-                0xd0018600                . = ALIGN (0x40)
-                0xd0018600                __CSA_END = .
+                0xd00149f0     0x4010
+                0xd0014a00                . = ALIGN (0x40)
+ *fill*         0xd00149f0       0x10 00
+                0xd0014a00                __CSA_BEGIN = .
+                0xd0014a00                __CSA = .
+                0xd0018a00                . = (. + __CSA_SIZE)
+ *fill*         0xd0014a00     0x4000 00
+                0xd0018a00                . = ALIGN (0x40)
+                0xd0018a00                __CSA_END = .
 OUTPUT(Test.elf elf32-tricore)
 
 .version_info   memory region -> *default*
                 0x00000000     0x4b30
  .version_info  0x00000000     0x17a4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
- .version_info  0x000017a4      0xc3f src/hello.o
+ .version_info  0x000017a4      0xc3f src\hello.o
  .version_info  0x000023e3      0xfb1 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
  .version_info  0x00003394     0x179c c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
 
@@ -651,50 +674,50 @@ OUTPUT(Test.elf elf32-tricore)
                 0x00000000       0x46
  .comment       0x00000000       0x46 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
                                  0x47 (size before relaxing)
- .comment       0x00000000       0x47 src/hello.o
+ .comment       0x00000000       0x47 src\hello.o
  .comment       0x00000000       0x47 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
  .comment       0x00000000       0x47 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
 
 .debug_frame    memory region -> *default*
                 0x00000000       0x40
- .debug_frame   0x00000000       0x20 src/hello.o
+ .debug_frame   0x00000000       0x20 src\hello.o
  .debug_frame   0x00000020       0x20 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
 
 .debug_info     memory region -> *default*
-                0x00000000      0xbbd
- .debug_info    0x00000000      0x9a3 src/hello.o
- .debug_info    0x000009a3      0x1b9 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
- .debug_info    0x00000b5c       0x61 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
+                0x00000000      0xd3d
+ .debug_info    0x00000000      0xb23 src\hello.o
+ .debug_info    0x00000b23      0x1b9 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+ .debug_info    0x00000cdc       0x61 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
 
 .debug_abbrev   memory region -> *default*
-                0x00000000      0x14f
- .debug_abbrev  0x00000000       0xdc src/hello.o
- .debug_abbrev  0x000000dc       0x61 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
- .debug_abbrev  0x0000013d       0x12 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
+                0x00000000      0x1a6
+ .debug_abbrev  0x00000000      0x133 src\hello.o
+ .debug_abbrev  0x00000133       0x61 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+ .debug_abbrev  0x00000194       0x12 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
 
 .debug_aranges  memory region -> *default*
                 0x00000000       0x68
  .debug_aranges
-                0x00000000       0x20 src/hello.o
+                0x00000000       0x20 src\hello.o
  .debug_aranges
                 0x00000020       0x20 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
  .debug_aranges
                 0x00000040       0x28 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
 
 .debug_line     memory region -> *default*
-                0x00000000      0x1ae
- .debug_line    0x00000000       0xf7 src/hello.o
- .debug_line    0x000000f7       0x72 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
- .debug_line    0x00000169       0x45 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
+                0x00000000      0x1b0
+ .debug_line    0x00000000       0xf9 src\hello.o
+ .debug_line    0x000000f9       0x72 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+ .debug_line    0x0000016b       0x45 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
 
 .debug_macinfo  memory region -> *default*
-                0x00000000     0x283c
+                0x00000000     0x28ab
  .debug_macinfo
-                0x00000000     0x283c src/hello.o
+                0x00000000     0x28ab src\hello.o
 
 .debug_str      memory region -> *default*
-                0x00000000       0x63
- .debug_str     0x00000000       0x63 src/hello.o
+                0x00000000       0x7c
+ .debug_str     0x00000000       0x7c src\hello.o
 
 .debug_ranges   memory region -> *default*
                 0x00000000       0x30
@@ -704,22 +727,21 @@ OUTPUT(Test.elf elf32-tricore)
 Cross Reference Table
 
 Symbol                                            File
-TestStruct5Var                                    src/hello.o
-TestStructArrayVar1                               src/hello.o
-TestStructVar1                                    src/hello.o
-TestStructVar1Array                               src/hello.o
-TestStructVar2                                    src/hello.o
-TestVarArray1d                                    src/hello.o
-TestVarArray2d                                    src/hello.o
-TestVarArray3d                                    src/hello.o
-TestVarArrayFloat32                               src/hello.o
-TestVarArrayUint163d                              src/hello.o
-TestVarArrayUint32                                src/hello.o
-TestVarFloat1                                     src/hello.o
-TestVarFloat2                                     src/hello.o
-TestVaru32_1                                      src/hello.o
-TestVaru32_2                                      src/hello.o
-TestVaru32_3                                      src/hello.o
+TestStruct5Var                                    src\hello.o
+TestStructArrayVar1                               src\hello.o
+TestStructVar1                                    src\hello.o
+TestStructVar1Array                               src\hello.o
+TestStructVar2                                    src\hello.o
+TestVarArray1d                                    src\hello.o
+TestVarArray2d                                    src\hello.o
+TestVarArray3d                                    src\hello.o
+TestVarArrayFloat32                               src\hello.o
+TestVarArrayUint32                                src\hello.o
+TestVarFloat1                                     src\hello.o
+TestVarFloat2                                     src\hello.o
+TestVaru32_1                                      src\hello.o
+TestVaru32_2                                      src\hello.o
+TestVaru32_3                                      src\hello.o
 _Jv_RegisterClasses                               c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
 _SMALL_DATA2_                                     c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
 _SMALL_DATA3_                                     c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
@@ -745,5 +767,7 @@ _fini                                             c:/hightec/toolchains/tricore/
 _init                                             c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
                                                   c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
 _start                                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-main                                              src/hello.o
+main                                              src\hello.o
                                                   c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
+testU8xxxx                                        src\hello.o
+testU8xxxxyyy                                     src\hello.o

@@ -39,6 +39,7 @@ class ElfAddrObj(ELFFile):
         self.array_type_dict = {}
         self.array_dict = {}
         self._versioninfo = None
+        self._die_depth = 0
         self._re_pattern = re.compile(r'DW_OP_plus_uconst:\s+(\d+)')
         self.re_pattern_varname = re.compile(r'([a-zA-Z_][a-zA-Z0-9_]+)\s*\[(\d+)\]')
         self.re_pattern_array = re.compile(r"\[(\d+)\]")
@@ -110,7 +111,7 @@ class ElfAddrObj(ELFFile):
         # Offset of the .debug_info section in the stream
         iter_cus = self.dwarfinfo.iter_CUs()
         for cu in iter_cus:
-            die_depth = 0
+            self._die_depth = 0
             struct_name = None
             iter_dies = cu.iter_DIEs()
             for die in iter_dies:
@@ -136,9 +137,34 @@ class ElfAddrObj(ELFFile):
             self._process_array(die, iter_dies)
         elif die.tag == self.DW_AT_BASE_TYPE:
             self._process_base_type(die)
-
+        elif die.tag == 'DW_TAG_compile_unit':
+            pass
+        elif die.tag == "DW_TAG_const_type":
+            self.offset_dict[die.offset] = self._attr_to_dict(die)
+        elif die.tag == None:
+            pass
+        elif die.tag == "DW_TAG_volatile_type":
+            self.offset_dict[die.offset] = self._attr_to_dict(die)
         else:
-            self._logger.warning("Unhandled tag type:{}".format(die.tag))
+            self._process_unneeded(die, iter_dies)
+
+
+
+    def _process_unneeded(self, die, iter_dies):
+        while(1):
+            #attrs = self._attr_to_dict(die)
+            if die.is_null():
+                self._die_depth  -= 1
+            if die.has_children:
+                self._die_depth  += 1
+            self._logger.info("Unhandled die: is_null:{0}, has_children:{1}, die_depth:{2}, info:{3}".format(die.is_null(), die.has_children, self._die_depth , die.attributes))
+
+            if self._die_depth  <= 0:
+                break
+            try:
+                die = next(iter_dies)
+            except StopIteration:
+                pass
 
     def _process_union(self, die, iter_dies):
         struct_name = None
@@ -164,7 +190,7 @@ class ElfAddrObj(ELFFile):
             at_name = attrs[self.DW_AT_NAME]
         else:
             # Todo will be handled later
-            pass
+            print(attrs)
         attrs[self.ABBREV_TAG] = die.tag
         self.variables_dict[at_name] = attrs
 
@@ -172,17 +198,15 @@ class ElfAddrObj(ELFFile):
         attrs = self._attr_to_dict(die)
         if self.DW_AT_NAME in attrs:
             struct_name = attrs[self.DW_AT_NAME]
-            self.struct_dict[struct_name] = {}
         else:
-            pass
-            # Todo this maybe a union, will be handled later.
+            struct_name = str(die.offset)
+        self.struct_dict[struct_name] = {}
         self.offset_dict[die.offset] = attrs
 
         next_die = next(iter_dies)
         while(next_die.tag == 'DW_TAG_member'):
             attrs = self._attr_to_dict(next_die)
             if self.DW_AT_NAME in attrs:
-                self.member_dict["{}.{}".format(attrs[self.DW_AT_NAME], struct_name)] = self.struct_dict[struct_name]
                 member_name = attrs[self.DW_AT_NAME]
                 self.struct_dict[struct_name][member_name] = attrs
             else:
@@ -192,7 +216,7 @@ class ElfAddrObj(ELFFile):
                     member_name = i[self.DW_AT_NAME]
                     self.struct_dict[struct_name][member_name] = i
             next_die = next(iter_dies)
-        self._process_die(next_die, iter_dies)
+
 
 
     def _process_base_type(self, die):
@@ -207,7 +231,15 @@ class ElfAddrObj(ELFFile):
         upper_bound_list = []
         while (next_die.tag == 'DW_TAG_subrange_type'):
             attrs1 = self._attr_to_dict(next_die)
-            upper_bound_list.append(int(attrs1['DW_AT_upper_bound']))
+            if 'DW_AT_upper_bound' in attrs1:
+                bound = attrs1['DW_AT_upper_bound']
+                base = 10
+                if bound.upper().startswith("0X"):
+                    base = 16
+                upper_bound_list.append(int(bound, base))
+            else:
+                #Todo this should be handled later.
+                self._logger.warning("Unsupported AT type:{0}, offset:{1}, more info:{2}".format(next_die.tag, next_die.offset, next_die.attributes))
             next_die = next(iter_dies)
 
         attrs['DW_AT_upper_bound'] = upper_bound_list
@@ -232,6 +264,38 @@ class ElfAddrObj(ELFFile):
         attrs["raw_data"] = attrs_raw
         return attrs
 
+    def _get_struct_info(self, root_full):
+        all_mem_offset, baseoffset, root_base_name, root_type = 0, 0, root_full, None
+        if '[' in root_full:
+            #root_full can be 'Can_kTxHwObjectConfig_0[1]'
+            root_base_name, offset = re.findall(self.re_pattern_varname, root_full)[0]
+            #root_base_name = 'Can_kTxHwObjectConfig_0',  offset = 1
+            array_at_type_offset = self.variables_dict[root_base_name][self.DW_AT_TYPE]
+            if self.offset_dict[array_at_type_offset][self.ABBREV_TAG] == 'DW_TAG_const_type':
+                # static const Can_TxHwObjectConfigType Can_kTxHwObjectConfig_0[]
+                array_at_type_offset = self.offset_dict[array_at_type_offset][self.DW_AT_TYPE]
+                if self.offset_dict[array_at_type_offset][self.ABBREV_TAG] == 'DW_TAG_volatile_type':
+                    array_at_type_offset = self.offset_dict[array_at_type_offset][self.DW_AT_TYPE]
+            else:
+
+                print("")
+            if array_at_type_offset not in self.array_type_dict:
+                raise KeyError
+            root_type = self.array_type_dict[array_at_type_offset]
+            base_type = self.offset_dict[root_type[self.DW_AT_TYPE]]
+            while( base_type[self.ABBREV_TAG] == 'DW_TAG_typedef'):
+                base_type = self.offset_dict[base_type[self.DW_AT_TYPE]]
+            struct_size = int(base_type['DW_AT_byte_size'])
+            baseoffset = struct_size * int(offset)
+            self._logger.info("Array type found with name:{0}, struct size:{1}, baseoffset:{2}".format(root_full, struct_size,baseoffset))
+            root_struct_name = base_type[self.DW_AT_NAME]
+        else:
+            root_type = self.offset_dict[self.variables_dict[root_base_name][self.DW_AT_TYPE]]
+        #if root_type[self.ABBREV_TAG] == 'DW_TAG_const_type':
+        #    array_type = self.offset_dict[array_at_type_offset][self.DW_AT_TYPE]
+
+            root_struct_name = self.offset_dict[root_type[self.DW_AT_TYPE]][self.DW_AT_NAME]
+        return (root_struct_name, baseoffset, root_base_name)
 
     def get_var_addrs(self, var):
         addr = None
@@ -240,17 +304,8 @@ class ElfAddrObj(ELFFile):
         if "." in var:
             names = var.split(".")
             root_full, members = names[0], names[1:]
-            all_mem_offset, baseoffset, root_base_name,  root_type = 0, 0, root_full, None
-            if '[' in root_full:
-                root_base_name, offset = re.findall(self.re_pattern_varname, root_full)[0]
-                root_type = self.array_type_dict[self.variables_dict[root_base_name][self.DW_AT_TYPE]]
-                array_base_size = int(self.offset_dict[root_type[self.DW_AT_TYPE]]['DW_AT_byte_size'])
-                baseoffset = array_base_size * int(offset)
-                self._logger.info("Array type found with name:{0}, base size:{1}, baseoffset:{2}".format(root_full, array_base_size, baseoffset))
-
-            root_type = self.offset_dict[self.variables_dict[root_base_name][self.DW_AT_TYPE]]
-            root_struct_name = self.offset_dict[root_type[self.DW_AT_TYPE]][self.DW_AT_NAME]
-
+            all_mem_offset, baseoffset, root_base_name, root_type = 0, 0, root_full, None
+            root_struct_name, baseoffset, root_base_name = self._get_struct_info(root_full)
             root_struct = self.struct_dict[root_struct_name]
             for mem in members:
                 # first to find the member offset
@@ -288,9 +343,16 @@ class ElfAddrObj(ELFFile):
                 if array_name in self.symbol_dict:
                     res = [int(i) for i in re.findall(self.re_pattern_array, var[var.find('['):])]
                     array_base_type = self.offset_dict[self.offset_dict[self.variables_dict[array_name][self.DW_AT_TYPE]][self.DW_AT_TYPE]]
-                    array_base_type_name = array_base_type[self.DW_AT_NAME]
-                    array_base_type_size = int(self.offset_dict[array_base_type[self.DW_AT_TYPE]]['DW_AT_byte_size'])
-                    array_type = self.array_type_dict[self.variables_dict[array_name][self.DW_AT_TYPE]]
+                    #array_base_type['abbrev_tag'] == 'DW_TAG_array_type'
+                    #array_base_type_name = array_base_type[self.DW_AT_NAME]
+                    if array_base_type[self.ABBREV_TAG] != 'DW_TAG_base_type':
+                        while('DW_TAG_base_type' != array_base_type[self.ABBREV_TAG]):
+                            array_base_type = self.offset_dict[array_base_type[self.DW_AT_TYPE]]
+                    array_base_type_size = int(array_base_type['DW_AT_byte_size'])
+                    variable_type = self.variables_dict[array_name][self.DW_AT_TYPE]
+                    while( variable_type not in self.array_type_dict):
+                        variable_type = self.offset_dict[variable_type][self.DW_AT_TYPE]
+                    array_type = self.array_type_dict[variable_type]
                     if 'array_size_info' not in array_type:
                         temp_array = array_type['DW_AT_upper_bound'].copy()
                         temp_array.reverse()
