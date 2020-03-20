@@ -327,6 +327,8 @@ class ElfAddrObj(ELFFile):
         self._logger.info("Element :{0}, offset:{1}".format(mem_base, off))
         root_type = self.offset_dict[self.array_type_dict[root_struct[mem_base][self.DW_AT_TYPE]][self.DW_AT_TYPE]]
         mem_type = self.offset_dict[root_type[self.DW_AT_TYPE]]
+        while(self.ABBREV_TAG in mem_type and mem_type[self.ABBREV_TAG] == 'DW_TAG_typedef'):
+            mem_type = self.offset_dict[mem_type[self.DW_AT_TYPE]]
         mem_size = int(mem_type['DW_AT_byte_size'])
         membaseoffset += mem_size * int(offset)
         self._logger.info("Array type found with base member name:{0}, base size:{1}, membaseoffset:{2}".format(mem, mem_size,membaseoffset))
