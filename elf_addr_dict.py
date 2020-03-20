@@ -145,9 +145,22 @@ class ElfAddrObj(ELFFile):
             pass
         elif die.tag == "DW_TAG_volatile_type":
             self.offset_dict[die.offset] = self._attr_to_dict(die)
+        elif die.tag == "DW_TAG_enumeration_type":
+            self._process_enum(die, iter_dies)
         else:
             self._process_unneeded(die, iter_dies)
 
+    def _process_enum(self, die, iter_dies):
+        self.offset_dict[die.offset] = {}
+        attrs = self._attr_to_dict(die)
+        for key in attrs:
+            self.offset_dict[die.offset][key] = attrs[key]
+        self.offset_dict[die.offset][self.DW_AT_TYPE] = die.offset
+        next_die = next(iter_dies)
+        while(next_die.tag == "DW_TAG_enumerator"):
+            attrs = self._attr_to_dict(next_die)
+            self.offset_dict[die.offset][attrs[self.DW_AT_NAME]] = attrs
+            next_die = next(iter_dies)
 
 
     def _process_unneeded(self, die, iter_dies):
@@ -199,7 +212,9 @@ class ElfAddrObj(ELFFile):
         if self.DW_AT_NAME in attrs:
             struct_name = attrs[self.DW_AT_NAME]
         else:
-            struct_name = str(die.offset)
+            struct_name = die.offset
+            self._logger.warning("None named structure found with offset:{0}".format(die.offset))
+            attrs[self.DW_AT_NAME] = die.offset
         self.struct_dict[struct_name] = {}
         self.offset_dict[die.offset] = attrs
 
@@ -261,7 +276,7 @@ class ElfAddrObj(ELFFile):
             attrs[self.DW_AT_TYPE] = typeint
         if self.DW_AT_NAME in attrs and attrs[self.DW_AT_NAME].startswith("(indirect string, offset:"):
             attrs[self.DW_AT_NAME] = attrs[self.DW_AT_NAME].split(":")[2].strip()
-        attrs["raw_data"] = attrs_raw
+        attrs["raw_data"] = die
         return attrs
 
     def _get_struct_info(self, root_full):
@@ -288,13 +303,20 @@ class ElfAddrObj(ELFFile):
             struct_size = int(base_type['DW_AT_byte_size'])
             baseoffset = struct_size * int(offset)
             self._logger.info("Array type found with name:{0}, struct size:{1}, baseoffset:{2}".format(root_full, struct_size,baseoffset))
-            root_struct_name = base_type[self.DW_AT_NAME]
+            if self.DW_AT_NAME in base_type:
+                root_struct_name = base_type[self.DW_AT_NAME]
+            else:
+                root_struct_name = None
+                self._logger.error("Not found structure :{}".format(root_type))
         else:
             root_type = self.offset_dict[self.variables_dict[root_base_name][self.DW_AT_TYPE]]
         #if root_type[self.ABBREV_TAG] == 'DW_TAG_const_type':
-        #    array_type = self.offset_dict[array_at_type_offset][self.DW_AT_TYPE]
-
-            root_struct_name = self.offset_dict[root_type[self.DW_AT_TYPE]][self.DW_AT_NAME]
+            array_type = self.offset_dict[root_type[self.DW_AT_TYPE]]
+            if self.DW_AT_NAME in array_type:
+                root_struct_name = array_type[self.DW_AT_NAME]
+            else:
+                root_struct_name = None
+                self._logger.error("Not found structure :{}".format(root_type))
         return (root_struct_name, baseoffset, root_base_name)
 
     def _get_array_member_info(self, mem, root_struct):
@@ -314,7 +336,7 @@ class ElfAddrObj(ELFFile):
         array_base_type = self.offset_dict[
             self.offset_dict[self.variables_dict[array_name][self.DW_AT_TYPE]][self.DW_AT_TYPE]]
         if array_base_type[self.ABBREV_TAG] != 'DW_TAG_base_type':
-            while ('DW_TAG_base_type' != array_base_type[self.ABBREV_TAG]):
+            while ('DW_TAG_base_type' != array_base_type[self.ABBREV_TAG] and 'DW_TAG_enumeration_type' != array_base_type[self.ABBREV_TAG]):
                 array_base_type = self.offset_dict[array_base_type[self.DW_AT_TYPE]]
         array_base_type_size = int(array_base_type['DW_AT_byte_size'])
         variable_type = self.variables_dict[array_name][self.DW_AT_TYPE]
@@ -362,8 +384,13 @@ class ElfAddrObj(ELFFile):
 
                 if root_type[self.ABBREV_TAG] == self.DW_AT_TYPEDEF and root_type[self.DW_AT_TYPE] in self.offset_dict:
                     mem_type = self.offset_dict[root_type[self.DW_AT_TYPE]]
-                    if mem_type[self.ABBREV_TAG] != self.DW_AT_BASE_TYPE:
-                        root_struct = self.struct_dict[mem_type[self.DW_AT_NAME]]
+                    if mem_type[self.ABBREV_TAG] == "DW_TAG_structure_type":
+                        if self.DW_AT_NAME in mem_type:
+                            root_struct = self.struct_dict[mem_type[self.DW_AT_NAME]]
+                        else:
+                            self._logger.error("Not found structure :{}".format(mem_type))
+                    #elif mem_type[self.ABBREV_TAG] == 'DW_TAG_typedef':
+
                 all_mem_offset += membaseoffset
             addr = self.symbol_dict[root_base_name] + baseoffset + all_mem_offset
             self._logger.info("End processing variable:{0}, base offset:{1}, member offset:{2}, addr:{3:#x}".format(var, baseoffset, all_mem_offset, addr))
