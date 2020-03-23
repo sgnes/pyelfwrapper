@@ -38,6 +38,8 @@ class ElfAddrObj(ELFFile):
         self.union_dict = {}
         self.array_type_dict = {}
         self.array_dict = {}
+        self.typedef_dict = {}
+        self.enum_dict = {}
         self._versioninfo = None
         self._die_depth = 0
         self._re_pattern = re.compile(r'DW_OP_plus_uconst:\s+(\d+)')
@@ -128,6 +130,7 @@ class ElfAddrObj(ELFFile):
         elif die.tag == "DW_TAG_typedef":
             attrs = self._attr_to_dict(die)
             self.offset_dict[die.offset] = attrs
+            self.typedef_dict[attrs[self.DW_AT_NAME]] = attrs
         elif die.tag == "DW_TAG_variable":
             self._process_variable(die, iter_dies)
         elif die.tag == "DW_TAG_union_type":
@@ -151,11 +154,17 @@ class ElfAddrObj(ELFFile):
             self._process_unneeded(die, iter_dies)
 
     def _process_enum(self, die, iter_dies):
-        self.offset_dict[die.offset] = {}
         attrs = self._attr_to_dict(die)
+        self.offset_dict[die.offset] = {}
         for key in attrs:
             self.offset_dict[die.offset][key] = attrs[key]
+        if self.DW_AT_NAME not in attrs:
+            attrs[self.DW_AT_NAME] = die.offset
+        enum_type_name = attrs[self.DW_AT_NAME]
+        self.enum_dict[enum_type_name] = attrs
+
         self.offset_dict[die.offset][self.DW_AT_TYPE] = die.offset
+        self.offset_dict[die.offset][self.ABBREV_TAG] = die.tag
         next_die = next(iter_dies)
         while(next_die.tag == "DW_TAG_enumerator"):
             attrs = self._attr_to_dict(next_die)
@@ -277,6 +286,7 @@ class ElfAddrObj(ELFFile):
         if self.DW_AT_NAME in attrs and attrs[self.DW_AT_NAME].startswith("(indirect string, offset:"):
             attrs[self.DW_AT_NAME] = attrs[self.DW_AT_NAME].split(":")[2].strip()
         attrs["raw_data"] = die
+        attrs["offset"] = die.offset
         return attrs
 
     def _get_struct_info(self, root_full):
@@ -419,4 +429,17 @@ class ElfAddrObj(ELFFile):
             else:
                 raise KeyError
         return addr
+
+
+    def get_enum_info(self, name):
+        enum_type = None
+        if name in self.enum_dict:
+            enum_type = self.offset_dict[self.enum_dict[name]['offset']]
+        elif name in self.typedef_dict:
+            enum_type = self.offset_dict[self.typedef_dict[name][self.DW_AT_TYPE]]
+            while enum_type[self.ABBREV_TAG] == self.DW_AT_TYPEDEF:
+                enum_type = self.offset_dict[enum_type[self.DW_AT_TYPE]]
+        return {i:enum_type[i]["DW_AT_const_value"] for i in enum_type if type(enum_type[i]) == dict}
+            
+
 
