@@ -11,12 +11,14 @@ for user to get the global variable address informations.
 ### Installation
 
 
-Install the dependencies.
+Install use pip.
 
 ```sh
-$ pip install pyelftools
+$ pip install python_elf_wrapper
 ```
 
+
+ 
 
 ### How to use it
 
@@ -25,6 +27,7 @@ from elf_addr_dict import ElfAddrObj
 elf = ElfAddrObj(r"example/test.elf")
 var_addr = elf.get_var_addrs('TestStructVar1')
 print(var_addr)
+enum_info = self.get_enum_info('TestEnumAType')
 ```
 
 ### Supported variable types

@@ -29,6 +29,7 @@ class ElfAddrObj(ELFFile):
 
 
     def __init__(self, elf_file):
+        self.version = '0.0.2'
         self.struct_dict = objdict()
         self.offset_dict = objdict()
         self.member_dict = objdict()
