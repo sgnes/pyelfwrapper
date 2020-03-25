@@ -9,7 +9,7 @@ c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../
 
 Linker version: GNU ld version (GNU Binutils) 2.20 (TriCore) using BFD version (GNU Binutils) 2.20 (v2.3), Tool Version v2.7
 Name of linker executable: c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/bin/ld.exe
-Date of link run: Mon Mar 23 17:00:45 2020
+Date of link run: Wed Mar 25 09:26:07 2020
 Name of linker map file: Test.map
 
 >>> Symbols (global (S = g) and static (S = l); sorted by address)
@@ -101,42 +101,43 @@ Start      End         Size S Name                       Memory      O-Sec      
 0xd0000008 0xd0000008     0 l force_to_data              DMI_DSPR    .data         .data                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
 0xd0000010 0xd0000010     0 l completed.3082             DMI_DSPR    .bss          .bss                             c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
 0xd0000014 0xd0000014     0 l dtor_idx.3084              DMI_DSPR    .bss          .bss                             c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xd0000018 0xd0000021    10 g TestEnumTest11             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0000022 0xd000002b    10 g TestEnumTest1              DMI_DSPR    .bss          .bss                             src\hello.o
-0xd000002c 0xd000022b   512 g testU8xxxxyyy              DMI_DSPR    .bss          .bss                             src\hello.o
-0xd000022c 0xd000042b   512 g testU8xxxx                 DMI_DSPR    .bss          .bss                             src\hello.o
-0xd000042c 0xd000042c     1 g Tst1111                    DMI_DSPR    .bss          .bss                             src\hello.o
-0xd000042d 0xd000042d     1 g Enm1A                      DMI_DSPR    .bss          .bss                             src\hello.o
-0xd000042e 0xd000042e     1 g EnmA1                      DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0000430 0xd000a06f 40000 g TestStruct5Var             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd000a070 0xd000cf4f 12000 l TestVarArrayUint163d       DMI_DSPR    .bss          .bss                             src\hello.o
-0xd000cf50 0xd0012d0f 24000 g TestVarArray3d             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0012d10 0xd001302f   800 g TestVarArray2d             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0013030 0xd0013057    40 g TestVarArray1d             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0013058 0xd001307f    40 g TestVarArrayFloat32        DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0013080 0xd00130a7    40 g TestVarArrayUint32         DMI_DSPR    .bss          .bss                             src\hello.o
-0xd00130a8 0xd00130ab     4 g TestVarFloat2              DMI_DSPR    .bss          .bss                             src\hello.o
-0xd00130ac 0xd00130af     4 g TestVarFloat1              DMI_DSPR    .bss          .bss                             src\hello.o
-0xd00130b0 0xd00130b3     4 g TestVaru32_3               DMI_DSPR    .bss          .bss                             src\hello.o
-0xd00130b4 0xd00130b7     4 g TestVaru32_2               DMI_DSPR    .bss          .bss                             src\hello.o
-0xd00130b8 0xd00130bb     4 g TestVaru32_1               DMI_DSPR    .bss          .bss                             src\hello.o
-0xd00130bc 0xd001313b   128 g TestStructVar2             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd001313c 0xd001363b  1280 g TestStructArrayVar1        DMI_DSPR    .bss          .bss                             src\hello.o
-0xd001363c 0xd0013b3b  1280 g TestStructVar1Array        DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0013b3c 0xd0013bbb   128 g TestStructVar1             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0013bc0 0xd0013bc3     4 g __progname                 DMI_DSPR    .bss          .bss                             libos_exit.o
-0xd0013bc8 0xd0013bc8     0 g __USTACK_BEGIN             DMI_DSPR    .ustack       .ustack                          Test.elf
-0xd0014bc8 0xd0014bc8     0 g __ISTACK_BEGIN             DMI_DSPR    .istack       .istack                          Test.elf
-0xd0014bc8 0xd0014bc8     0 g __USTACK                   DMI_DSPR    .ustack       .ustack                          Test.elf
-0xd0014bc8 0xd0014bc8     0 g __USTACK_END               DMI_DSPR    .ustack       .ustack                          Test.elf
-0xd0014fc8 0xd0014fc8     0 g __HEAP                     DMI_DSPR    .heap         .heap                            Test.elf
-0xd0014fc8 0xd0014fc8     0 g __HEAP_BEGIN               DMI_DSPR    .heap         .heap                            Test.elf
-0xd0014fc8 0xd0014fc8     0 g __ISTACK                   DMI_DSPR    .istack       .istack                          Test.elf
-0xd0014fc8 0xd0014fc8     0 g __ISTACK_END               DMI_DSPR    .istack       .istack                          Test.elf
-0xd0015fc8 0xd0015fc8     0 g __HEAP_END                 DMI_DSPR    .heap         .heap                            Test.elf
-0xd0016000 0xd0016000     0 g __CSA                      DMI_DSPR    .csa          .csa                             Test.elf
-0xd0016000 0xd0016000     0 g __CSA_BEGIN                DMI_DSPR    .csa          .csa                             Test.elf
-0xd001a000 0xd001a000     0 g __CSA_END                  DMI_DSPR    .csa          .csa                             Test.elf
+0xd0000018 0xd00000a7   144 g L9301_CHxDIAG              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00000a8 0xd00000b1    10 g TestEnumTest11             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00000b2 0xd00000bb    10 g TestEnumTest1              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00000bc 0xd00002bb   512 g testU8xxxxyyy              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00002bc 0xd00004bb   512 g testU8xxxx                 DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00004bc 0xd00004bc     1 g Tst1111                    DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00004bd 0xd00004bd     1 g Enm1A                      DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00004be 0xd00004be     1 g EnmA1                      DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00004c0 0xd000a0ff 40000 g TestStruct5Var             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd000a100 0xd000cfdf 12000 l TestVarArrayUint163d       DMI_DSPR    .bss          .bss                             src\hello.o
+0xd000cfe0 0xd0012d9f 24000 g TestVarArray3d             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0012da0 0xd00130bf   800 g TestVarArray2d             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00130c0 0xd00130e7    40 g TestVarArray1d             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00130e8 0xd001310f    40 g TestVarArrayFloat32        DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0013110 0xd0013137    40 g TestVarArrayUint32         DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0013138 0xd001313b     4 g TestVarFloat2              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd001313c 0xd001313f     4 g TestVarFloat1              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0013140 0xd0013143     4 g TestVaru32_3               DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0013144 0xd0013147     4 g TestVaru32_2               DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0013148 0xd001314b     4 g TestVaru32_1               DMI_DSPR    .bss          .bss                             src\hello.o
+0xd001314c 0xd00131cb   128 g TestStructVar2             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00131cc 0xd00136cb  1280 g TestStructArrayVar1        DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00136cc 0xd0013bcb  1280 g TestStructVar1Array        DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0013bcc 0xd0013c4b   128 g TestStructVar1             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0013c50 0xd0013c53     4 g __progname                 DMI_DSPR    .bss          .bss                             libos_exit.o
+0xd0013c58 0xd0013c58     0 g __USTACK_BEGIN             DMI_DSPR    .ustack       .ustack                          Test.elf
+0xd0014c58 0xd0014c58     0 g __ISTACK_BEGIN             DMI_DSPR    .istack       .istack                          Test.elf
+0xd0014c58 0xd0014c58     0 g __USTACK                   DMI_DSPR    .ustack       .ustack                          Test.elf
+0xd0014c58 0xd0014c58     0 g __USTACK_END               DMI_DSPR    .ustack       .ustack                          Test.elf
+0xd0015058 0xd0015058     0 g __HEAP                     DMI_DSPR    .heap         .heap                            Test.elf
+0xd0015058 0xd0015058     0 g __HEAP_BEGIN               DMI_DSPR    .heap         .heap                            Test.elf
+0xd0015058 0xd0015058     0 g __ISTACK                   DMI_DSPR    .istack       .istack                          Test.elf
+0xd0015058 0xd0015058     0 g __ISTACK_END               DMI_DSPR    .istack       .istack                          Test.elf
+0xd0016058 0xd0016058     0 g __HEAP_END                 DMI_DSPR    .heap         .heap                            Test.elf
+0xd0016080 0xd0016080     0 g __CSA                      DMI_DSPR    .csa          .csa                             Test.elf
+0xd0016080 0xd0016080     0 g __CSA_BEGIN                DMI_DSPR    .csa          .csa                             Test.elf
+0xd001a080 0xd001a080     0 g __CSA_END                  DMI_DSPR    .csa          .csa                             Test.elf
 0xf00360f0 0xf00360f0     0 l SCU_WDTSCON0               *ABS*       *ABS*         *ABS*                            *ABS*
 0xf00360f4 0xf00360f4     0 l SCU_WDTSCON1               *ABS*       *ABS*         *ABS*                            *ABS*
 0xf0036100 0xf0036100     0 l SCU_WDTCPU0CON0            *ABS*       *ABS*         *ABS*                            *ABS*
@@ -154,36 +155,37 @@ Start      End         Size S Name                       Memory      O-Sec      
 0x0000fe04 0x0000fe04     0 l $psw                       *ABS*       *ABS*         *ABS*                            *ABS*
 0x0000fe1c 0x0000fe1c     0 l CORE_ID                    *ABS*       *ABS*         *ABS*                            *ABS*
 0x800004b8 0x800007af   760 l Can_kTxHwObjectConfig_0    PMU_PFLASH0 .rodata       .rodata                          src\hello.o
-0xd000042d 0xd000042d     1 g Enm1A                      DMI_DSPR    .bss          .bss                             src\hello.o
-0xd000042e 0xd000042e     1 g EnmA1                      DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00004bd 0xd00004bd     1 g Enm1A                      DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00004be 0xd00004be     1 g EnmA1                      DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0000018 0xd00000a7   144 g L9301_CHxDIAG              DMI_DSPR    .bss          .bss                             src\hello.o
 0xf0036100 0xf0036100     0 l SCU_WDTCPU0CON0            *ABS*       *ABS*         *ABS*                            *ABS*
 0xf0036104 0xf0036104     0 l SCU_WDTCPU0CON1            *ABS*       *ABS*         *ABS*                            *ABS*
 0xf00360f0 0xf00360f0     0 l SCU_WDTSCON0               *ABS*       *ABS*         *ABS*                            *ABS*
 0xf00360f4 0xf00360f4     0 l SCU_WDTSCON1               *ABS*       *ABS*         *ABS*                            *ABS*
-0xd0000022 0xd000002b    10 g TestEnumTest1              DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0000018 0xd0000021    10 g TestEnumTest11             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0000430 0xd000a06f 40000 g TestStruct5Var             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd001313c 0xd001363b  1280 g TestStructArrayVar1        DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0013b3c 0xd0013bbb   128 g TestStructVar1             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd001363c 0xd0013b3b  1280 g TestStructVar1Array        DMI_DSPR    .bss          .bss                             src\hello.o
-0xd00130bc 0xd001313b   128 g TestStructVar2             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0013030 0xd0013057    40 g TestVarArray1d             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0012d10 0xd001302f   800 g TestVarArray2d             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd000cf50 0xd0012d0f 24000 g TestVarArray3d             DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0013058 0xd001307f    40 g TestVarArrayFloat32        DMI_DSPR    .bss          .bss                             src\hello.o
-0xd000a070 0xd000cf4f 12000 l TestVarArrayUint163d       DMI_DSPR    .bss          .bss                             src\hello.o
-0xd0013080 0xd00130a7    40 g TestVarArrayUint32         DMI_DSPR    .bss          .bss                             src\hello.o
-0xd00130ac 0xd00130af     4 g TestVarFloat1              DMI_DSPR    .bss          .bss                             src\hello.o
-0xd00130a8 0xd00130ab     4 g TestVarFloat2              DMI_DSPR    .bss          .bss                             src\hello.o
-0xd00130b8 0xd00130bb     4 g TestVaru32_1               DMI_DSPR    .bss          .bss                             src\hello.o
-0xd00130b4 0xd00130b7     4 g TestVaru32_2               DMI_DSPR    .bss          .bss                             src\hello.o
-0xd00130b0 0xd00130b3     4 g TestVaru32_3               DMI_DSPR    .bss          .bss                             src\hello.o
-0xd000042c 0xd000042c     1 g Tst1111                    DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00000b2 0xd00000bb    10 g TestEnumTest1              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00000a8 0xd00000b1    10 g TestEnumTest11             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00004c0 0xd000a0ff 40000 g TestStruct5Var             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00131cc 0xd00136cb  1280 g TestStructArrayVar1        DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0013bcc 0xd0013c4b   128 g TestStructVar1             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00136cc 0xd0013bcb  1280 g TestStructVar1Array        DMI_DSPR    .bss          .bss                             src\hello.o
+0xd001314c 0xd00131cb   128 g TestStructVar2             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00130c0 0xd00130e7    40 g TestVarArray1d             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0012da0 0xd00130bf   800 g TestVarArray2d             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd000cfe0 0xd0012d9f 24000 g TestVarArray3d             DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00130e8 0xd001310f    40 g TestVarArrayFloat32        DMI_DSPR    .bss          .bss                             src\hello.o
+0xd000a100 0xd000cfdf 12000 l TestVarArrayUint163d       DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0013110 0xd0013137    40 g TestVarArrayUint32         DMI_DSPR    .bss          .bss                             src\hello.o
+0xd001313c 0xd001313f     4 g TestVarFloat1              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0013138 0xd001313b     4 g TestVarFloat2              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0013148 0xd001314b     4 g TestVaru32_1               DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0013144 0xd0013147     4 g TestVaru32_2               DMI_DSPR    .bss          .bss                             src\hello.o
+0xd0013140 0xd0013143     4 g TestVaru32_3               DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00004bc 0xd00004bc     1 g Tst1111                    DMI_DSPR    .bss          .bss                             src\hello.o
 0x8fff8000 0x8fff8000     0 g __BROM_BEGIN               *ABS*       *ABS*         *ABS*                            *ABS*
 0x00008000 0x00008000     0 g __BROM_SIZE                *ABS*       *ABS*         *ABS*                            *ABS*
-0xd0016000 0xd0016000     0 g __CSA                      DMI_DSPR    .csa          .csa                             Test.elf
-0xd0016000 0xd0016000     0 g __CSA_BEGIN                DMI_DSPR    .csa          .csa                             Test.elf
-0xd001a000 0xd001a000     0 g __CSA_END                  DMI_DSPR    .csa          .csa                             Test.elf
+0xd0016080 0xd0016080     0 g __CSA                      DMI_DSPR    .csa          .csa                             Test.elf
+0xd0016080 0xd0016080     0 g __CSA_BEGIN                DMI_DSPR    .csa          .csa                             Test.elf
+0xd001a080 0xd001a080     0 g __CSA_END                  DMI_DSPR    .csa          .csa                             Test.elf
 0x00004000 0x00004000     0 g __CSA_SIZE                 *ABS*       *ABS*         *ABS*                            *ABS*
 0x800007d0 0x800007d0     0 g __CTOR_END__               PMU_PFLASH0 .ctors        .ctors                           Test.elf
 0x800007c8 0x800007c8     0 l __CTOR_END__               PMU_PFLASH0 .ctors        .ctors                           c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
@@ -194,13 +196,13 @@ Start      End         Size S Name                       Memory      O-Sec      
 0x800007e0 0x800007e0     0 g __DTOR_END__               PMU_PFLASH0 .dtors        .dtors                           Test.elf
 0x800007d0 0x800007d0     0 g __DTOR_LIST__              PMU_PFLASH0 .dtors        .dtors                           Test.elf
 0x800007d4 0x800007d4     0 l __DTOR_LIST__              PMU_PFLASH0 .dtors        .dtors                           c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
-0xd0014fc8 0xd0014fc8     0 g __HEAP                     DMI_DSPR    .heap         .heap                            Test.elf
-0xd0014fc8 0xd0014fc8     0 g __HEAP_BEGIN               DMI_DSPR    .heap         .heap                            Test.elf
-0xd0015fc8 0xd0015fc8     0 g __HEAP_END                 DMI_DSPR    .heap         .heap                            Test.elf
+0xd0015058 0xd0015058     0 g __HEAP                     DMI_DSPR    .heap         .heap                            Test.elf
+0xd0015058 0xd0015058     0 g __HEAP_BEGIN               DMI_DSPR    .heap         .heap                            Test.elf
+0xd0016058 0xd0016058     0 g __HEAP_END                 DMI_DSPR    .heap         .heap                            Test.elf
 0x00001000 0x00001000     0 g __HEAP_SIZE                *ABS*       *ABS*         *ABS*                            *ABS*
-0xd0014fc8 0xd0014fc8     0 g __ISTACK                   DMI_DSPR    .istack       .istack                          Test.elf
-0xd0014bc8 0xd0014bc8     0 g __ISTACK_BEGIN             DMI_DSPR    .istack       .istack                          Test.elf
-0xd0014fc8 0xd0014fc8     0 g __ISTACK_END               DMI_DSPR    .istack       .istack                          Test.elf
+0xd0015058 0xd0015058     0 g __ISTACK                   DMI_DSPR    .istack       .istack                          Test.elf
+0xd0014c58 0xd0014c58     0 g __ISTACK_BEGIN             DMI_DSPR    .istack       .istack                          Test.elf
+0xd0015058 0xd0015058     0 g __ISTACK_END               DMI_DSPR    .istack       .istack                          Test.elf
 0x00000400 0x00000400     0 g __ISTACK_SIZE              *ABS*       *ABS*         *ABS*                            *ABS*
 0xc0000000 0xc0000000     0 l __JCR_END__                PMI_PSPR    .jcr          .jcr                             c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
 0xc0000000 0xc0000000     0 l __JCR_LIST__               PMI_PSPR    .jcr          .jcr                             c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
@@ -219,9 +221,9 @@ Start      End         Size S Name                       Memory      O-Sec      
 0x80200000 0x80200000     0 g __PMU_PFLASH1_BEGIN        *ABS*       *ABS*         *ABS*                            *ABS*
 0x00200000 0x00200000     0 g __PMU_PFLASH1_SIZE         *ABS*       *ABS*         *ABS*                            *ABS*
 0x00002700 0x00002700     0 g __TRICORE_DERIVATE_NAME__  *ABS*       *ABS*         *ABS*                            *ABS*
-0xd0014bc8 0xd0014bc8     0 g __USTACK                   DMI_DSPR    .ustack       .ustack                          Test.elf
-0xd0013bc8 0xd0013bc8     0 g __USTACK_BEGIN             DMI_DSPR    .ustack       .ustack                          Test.elf
-0xd0014bc8 0xd0014bc8     0 g __USTACK_END               DMI_DSPR    .ustack       .ustack                          Test.elf
+0xd0014c58 0xd0014c58     0 g __USTACK                   DMI_DSPR    .ustack       .ustack                          Test.elf
+0xd0013c58 0xd0013c58     0 g __USTACK_BEGIN             DMI_DSPR    .ustack       .ustack                          Test.elf
+0xd0014c58 0xd0014c58     0 g __USTACK_END               DMI_DSPR    .ustack       .ustack                          Test.elf
 0x00001000 0x00001000     0 g __USTACK_SIZE              *ABS*       *ABS*         *ABS*                            *ABS*
 0x8000025c 0x8000025c     0 l __clear_byte               PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
 0x80000236 0x80000236     0 l __clear_dword              PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
@@ -243,7 +245,7 @@ Start      End         Size S Name                       Memory      O-Sec      
 0x8000040a 0x8000040a     0 l __do_global_dtors_aux      PMU_PFLASH0 .text         .text.__do_global_dtors_aux      c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
 0xd0000004 0xd0000004     0 g __dso_handle               DMI_DSPR    .data         .data                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
 0x8000019e 0x8000019e     0 g __init_csa                 PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
-0xd0013bc0 0xd0013bc3     4 g __progname                 DMI_DSPR    .bss          .bss                             libos_exit.o
+0xd0013c50 0xd0013c53     4 g __progname                 DMI_DSPR    .bss          .bss                             libos_exit.o
 0x80000122 0x80000122     0 l __remapped                 PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
 0x80000470 0x8000047f    16 g _exit                      PMU_PFLASH0 .text         .text._exit                      libos_exit.o
 0x800004b0 0x800004b0     0 g _fini                      PMU_PFLASH0 .fini         .fini                            c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
@@ -269,8 +271,8 @@ Start      End         Size S Name                       Memory      O-Sec      
 0x80000072 0x80000072     0 l init_stack_pointers        PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
 0x80000116 0x80000116     0 l jump_to_remapped           PMU_PFLASH0 .startup_code .startup_code                    c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
 0x800002cc 0x80000407   316 g main                       PMU_PFLASH0 .text         .text                            src\hello.o
-0xd000022c 0xd000042b   512 g testU8xxxx                 DMI_DSPR    .bss          .bss                             src\hello.o
-0xd000002c 0xd000022b   512 g testU8xxxxyyy              DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00002bc 0xd00004bb   512 g testU8xxxx                 DMI_DSPR    .bss          .bss                             src\hello.o
+0xd00000bc 0xd00002bb   512 g testU8xxxxyyy              DMI_DSPR    .bss          .bss                             src\hello.o
 
 
 ----- END EXTENDED MAP LISTING -----
@@ -286,7 +288,7 @@ PMU_DFLASH0_1    0xaf100000         0x00004000         0x00000000         0x0000
 PMU_DFLASH1      0xaf110000         0x00010000         0x00000000         0x00010000         r !xp
 BROM             0x8fff8000         0x00008000         0x00000000         0x00008000         xr !p
 PMI_PSPR         0xc0000000         0x00006000         0x00000004         0x00005ffc         xw !p
-DMI_DSPR         0xd0000000         0x0001c000         0x0001a000         0x00002000         w !xp
+DMI_DSPR         0xd0000000         0x0001c000         0x0001a080         0x00001f80         w !xp
 LMU_SRAM         0x90000000         0x00008000         0x00000000         0x00008000         w !xp
 *default*        0x00000000         0xffffffff         0x00000046         0xffffffb9
 
@@ -523,43 +525,44 @@ LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/s
  .jcr           0xc0000000        0x4 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
 
 .bss            memory region -> DMI_DSPR
-                0xd0000010    0x13bb8 load address 0x800007c0
+                0xd0000010    0x13c48 load address 0x800007c0
                 0xd0000010                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0xd0000010        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crti.o
  .bss           0xd0000010        0x8 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtbegin.o
  .bss           0xd0000018        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/crt0-tc27xx.o
- .bss           0xd0000018    0x13ba8 src\hello.o
-                0xd0000018                TestEnumTest11
-                0xd0000022                TestEnumTest1
-                0xd000002c                testU8xxxxyyy
-                0xd000022c                testU8xxxx
-                0xd000042c                Tst1111
-                0xd000042d                Enm1A
-                0xd000042e                EnmA1
-                0xd0000430                TestStruct5Var
-                0xd000cf50                TestVarArray3d
-                0xd0012d10                TestVarArray2d
-                0xd0013030                TestVarArray1d
-                0xd0013058                TestVarArrayFloat32
-                0xd0013080                TestVarArrayUint32
-                0xd00130a8                TestVarFloat2
-                0xd00130ac                TestVarFloat1
-                0xd00130b0                TestVaru32_3
-                0xd00130b4                TestVaru32_2
-                0xd00130b8                TestVaru32_1
-                0xd00130bc                TestStructVar2
-                0xd001313c                TestStructArrayVar1
-                0xd001363c                TestStructVar1Array
-                0xd0013b3c                TestStructVar1
- .bss           0xd0013bc0        0x8 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
-                0xd0013bc0                __progname
- .bss           0xd0013bc8        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
- .bss           0xd0013bc8        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
+ .bss           0xd0000018    0x13c38 src\hello.o
+                0xd0000018                L9301_CHxDIAG
+                0xd00000a8                TestEnumTest11
+                0xd00000b2                TestEnumTest1
+                0xd00000bc                testU8xxxxyyy
+                0xd00002bc                testU8xxxx
+                0xd00004bc                Tst1111
+                0xd00004bd                Enm1A
+                0xd00004be                EnmA1
+                0xd00004c0                TestStruct5Var
+                0xd000cfe0                TestVarArray3d
+                0xd0012da0                TestVarArray2d
+                0xd00130c0                TestVarArray1d
+                0xd00130e8                TestVarArrayFloat32
+                0xd0013110                TestVarArrayUint32
+                0xd0013138                TestVarFloat2
+                0xd001313c                TestVarFloat1
+                0xd0013140                TestVaru32_3
+                0xd0013144                TestVaru32_2
+                0xd0013148                TestVaru32_1
+                0xd001314c                TestStructVar2
+                0xd00131cc                TestStructArrayVar1
+                0xd00136cc                TestStructVar1Array
+                0xd0013bcc                TestStructVar1
+ .bss           0xd0013c50        0x8 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+                0xd0013c50                __progname
+ .bss           0xd0013c58        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtend.o
+ .bss           0xd0013c58        0x0 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
  *(.bss*)
  *(.gnu.linkonce.b.*)
-                0xd0013bc8                PROVIDE (__bss_end, .)
-                0xd0013bc8                . = ALIGN (0x8)
+                0xd0013c58                PROVIDE (__bss_end, .)
+                0xd0013c58                . = ALIGN (0x8)
 
 .pcptext        memory region -> PMU_PFLASH0
                 0x800007c0        0x0
@@ -606,7 +609,7 @@ LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/s
                 0x800007e0                . = ALIGN (0x8)
                 0x800007e0                PROVIDE (__clear_table, .)
                 0x800007e0        0x4 LONG 0xd0000010 (0x0 + ADDR (.bss))
-                0x800007e4        0x4 LONG 0x13bb8 SIZEOF (.bss)
+                0x800007e4        0x4 LONG 0x13c48 SIZEOF (.bss)
                 0x800007e8        0x4 LONG 0xd0000000 (0x0 + ADDR (.sbss))
                 0x800007ec        0x4 LONG 0x0 SIZEOF (.sbss)
                 0x800007f0        0x4 LONG 0xd0000000 (0x0 + ADDR (.zbss))
@@ -637,45 +640,45 @@ LOAD c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/s
                 0x80000840        0x4 LONG 0xffffffff
 
 .ustack         memory region -> DMI_DSPR
-                0xd0013bc8     0x1000
-                0xd0013bc8                . = ALIGN (0x8)
-                0xd0013bc8                __USTACK_BEGIN = .
-                0xd0014bc8                . = (. + __USTACK_SIZE)
- *fill*         0xd0013bc8     0x1000 00
-                0xd0014bc8                . = ALIGN (0x8)
-                0xd0014bc8                __USTACK = .
-                0xd0014bc8                __USTACK_END = .
+                0xd0013c58     0x1000
+                0xd0013c58                . = ALIGN (0x8)
+                0xd0013c58                __USTACK_BEGIN = .
+                0xd0014c58                . = (. + __USTACK_SIZE)
+ *fill*         0xd0013c58     0x1000 00
+                0xd0014c58                . = ALIGN (0x8)
+                0xd0014c58                __USTACK = .
+                0xd0014c58                __USTACK_END = .
 
 .istack         memory region -> DMI_DSPR
-                0xd0014bc8      0x400
-                0xd0014bc8                . = ALIGN (0x8)
-                0xd0014bc8                __ISTACK_BEGIN = .
-                0xd0014fc8                . = (. + __ISTACK_SIZE)
- *fill*         0xd0014bc8      0x400 00
-                0xd0014fc8                . = ALIGN (0x8)
-                0xd0014fc8                __ISTACK = .
-                0xd0014fc8                __ISTACK_END = .
+                0xd0014c58      0x400
+                0xd0014c58                . = ALIGN (0x8)
+                0xd0014c58                __ISTACK_BEGIN = .
+                0xd0015058                . = (. + __ISTACK_SIZE)
+ *fill*         0xd0014c58      0x400 00
+                0xd0015058                . = ALIGN (0x8)
+                0xd0015058                __ISTACK = .
+                0xd0015058                __ISTACK_END = .
 
 .heap           memory region -> DMI_DSPR
-                0xd0014fc8     0x1000
-                0xd0014fc8                . = ALIGN (0x8)
-                0xd0014fc8                __HEAP_BEGIN = .
-                0xd0014fc8                __HEAP = .
-                0xd0015fc8                . = (. + __HEAP_SIZE)
- *fill*         0xd0014fc8     0x1000 00
-                0xd0015fc8                . = ALIGN (0x8)
-                0xd0015fc8                __HEAP_END = .
+                0xd0015058     0x1000
+                0xd0015058                . = ALIGN (0x8)
+                0xd0015058                __HEAP_BEGIN = .
+                0xd0015058                __HEAP = .
+                0xd0016058                . = (. + __HEAP_SIZE)
+ *fill*         0xd0015058     0x1000 00
+                0xd0016058                . = ALIGN (0x8)
+                0xd0016058                __HEAP_END = .
 
 .csa            memory region -> DMI_DSPR
-                0xd0015fc8     0x4038
-                0xd0016000                . = ALIGN (0x40)
- *fill*         0xd0015fc8       0x38 00
-                0xd0016000                __CSA_BEGIN = .
-                0xd0016000                __CSA = .
-                0xd001a000                . = (. + __CSA_SIZE)
- *fill*         0xd0016000     0x4000 00
-                0xd001a000                . = ALIGN (0x40)
-                0xd001a000                __CSA_END = .
+                0xd0016058     0x4028
+                0xd0016080                . = ALIGN (0x40)
+ *fill*         0xd0016058       0x28 00
+                0xd0016080                __CSA_BEGIN = .
+                0xd0016080                __CSA = .
+                0xd001a080                . = (. + __CSA_SIZE)
+ *fill*         0xd0016080     0x4000 00
+                0xd001a080                . = ALIGN (0x40)
+                0xd001a080                __CSA_END = .
 OUTPUT(Test.elf elf32-tricore)
 
 .version_info   memory region -> *default*
@@ -699,16 +702,16 @@ OUTPUT(Test.elf elf32-tricore)
  .debug_frame   0x00000020       0x20 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
 
 .debug_info     memory region -> *default*
-                0x00000000      0xf67
- .debug_info    0x00000000      0xd4d src\hello.o
- .debug_info    0x00000d4d      0x1b9 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
- .debug_info    0x00000f06       0x61 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
+                0x00000000     0x10b0
+ .debug_info    0x00000000      0xe96 src\hello.o
+ .debug_info    0x00000e96      0x1b9 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+ .debug_info    0x0000104f       0x61 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
 
 .debug_abbrev   memory region -> *default*
-                0x00000000      0x1e5
- .debug_abbrev  0x00000000      0x172 src\hello.o
- .debug_abbrev  0x00000172       0x61 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
- .debug_abbrev  0x000001d3       0x12 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
+                0x00000000      0x223
+ .debug_abbrev  0x00000000      0x1b0 src\hello.o
+ .debug_abbrev  0x000001b0       0x61 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/../../../../tricore/lib/tc161/short-double\libos.a(libos_exit.o)
+ .debug_abbrev  0x00000211       0x12 c:/hightec/toolchains/tricore/v4.6.6.1/bin/../lib/gcc/tricore/4.6.4/tc161/short-double/crtn.o
 
 .debug_aranges  memory region -> *default*
                 0x00000000       0x68
@@ -744,6 +747,7 @@ Cross Reference Table
 Symbol                                            File
 Enm1A                                             src\hello.o
 EnmA1                                             src\hello.o
+L9301_CHxDIAG                                     src\hello.o
 TestEnumTest1                                     src\hello.o
 TestEnumTest11                                    src\hello.o
 TestStruct5Var                                    src\hello.o

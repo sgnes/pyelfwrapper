@@ -18,3 +18,5 @@ class ParseSequenceError(Error):
 class UnSupportedElfFormatError(Error):
     """this kind of debug structure information is not supported for now"""
     pass
+
+   
