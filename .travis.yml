@@ -1,4 +1,4 @@
-# https://travis-ci.org/sgnes/elf_addr_dict
+# https://travis-ci.org/sgnes/pyelfwrapper
 language: python
 sudo: required
 python:

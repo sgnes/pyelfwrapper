@@ -14,7 +14,7 @@ for user to get the global variable address informations.
 Install use pip.
 
 ```sh
-$ pip install python_elf_wrapper
+$ pip install pyelfwrapper
 ```
 
 
@@ -23,7 +23,7 @@ $ pip install python_elf_wrapper
 ### How to use it
 
 ```python 
-from elf_addr_dict import ElfAddrObj
+from elfwrapper.elf_wrapper import ElfAddrObj
 elf = ElfAddrObj(r"example/test.elf")
 var_addr = elf.get_var_addrs('TestStructVar1')
 print(var_addr)

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyelfwrapper", # Replace with your own username
-    version="0.0.2",
+    version="0.0.4",
     author="Sgnes",
     author_email="sgnes0514@gmai.com",
     description="A wrapper for dwarf format elf file",

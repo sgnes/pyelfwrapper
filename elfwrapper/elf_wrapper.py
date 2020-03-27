@@ -27,9 +27,9 @@ class ElfAddrObj(ELFFile):
     DW_AT_TYPEDEF = 'DW_TAG_typedef'
     DW_AT_NAME = 'DW_AT_name'
     DW_AT_BASE_TYPE = 'DW_TAG_base_type'
+    version = '0.0.4'
 
     def __init__(self, elf_file):
-        self.version = '0.0.2'
         self.struct_dict = objdict()
         self.offset_dict = objdict()
         self.member_dict = objdict()
@@ -50,7 +50,10 @@ class ElfAddrObj(ELFFile):
         self.elffile = ELFFile(self._elf_file_handler)
         self.dwarfinfo = self.elffile.get_dwarf_info()
         self.section_offset = self.dwarfinfo.debug_info_sec.global_offset
-        fileConfig('logging.conf')
+        try:
+            fileConfig('logging.conf')
+        except KeyError:
+            print("Logging configuration file not found.")
         self._logger = logging.getLogger()
         self._parse_symbol_table()
         self._parse_debug_info()
