@@ -1,0 +1,17 @@
+TestStructVar1
+TestStructVar1.level1_2.level2_2.levle3_2.level4_2.level5_2
+TestStruct5Var[1].TestUnionArrayLevel1TypeMem[3].level1_1.level2_1.levle3_1.level4_1.level5_2[1]
+TestStructVar1.level1_1.level2_1.levle3_1.level4_1.level5_1
+TestStructVar2.union1
+TestStructVar2.unionStructl1.level2_1.levle3_2.level4_2.level5_4
+TestVarArray3d[5][5][5]
+TestVarArray2d[5][5]
+TestVarArray1d[5]
+TestVarArrayUint163d[5][5][5]
+Can_kTxHwObjectConfig_0[11].MsgObjId
+Can_kTxHwObjectConfig_0[1].MsgObjId
+TestStructArrayVar1.level1_2.level2_1.levle3_2.level4_2.FiledEnum
+TestStructArrayVar1.level1_2.level2_1.levle3_2.level4_2.FiledEnumAray[2]
+TestEnumTest1
+L9301_CHxDIAG[4][5].U
+TestEnumTest11[2]

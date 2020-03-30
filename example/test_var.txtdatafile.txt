@@ -1,0 +1,17 @@
+TestStructVar1:D:0xD0013BCC
+TestStructVar1.level1_2.level2_2.levle3_2.level4_2.level5_2:D:0xD0013C45
+TestStruct5Var[1].TestUnionArrayLevel1TypeMem[3].level1_1.level2_1.levle3_1.level4_1.level5_2[1]:D:0xD0003EF1
+TestStructVar1.level1_1.level2_1.levle3_1.level4_1.level5_1:D:0xD0013BCC
+TestStructVar2.union1:D:0xD001318C
+TestStructVar2.unionStructl1.level2_1.levle3_2.level4_2.level5_4:D:0xD00131A7
+TestVarArray3d[5][5][5]:D:0xD001012C
+TestVarArray2d[5][5]:D:0xD0012F44
+TestVarArray1d[5]:D:0xD00130D4
+TestVarArrayUint163d[5][5][5]:D:0xD000B9A6
+Can_kTxHwObjectConfig_0[11].MsgObjId:D:0x80000510
+Can_kTxHwObjectConfig_0[1].MsgObjId:D:0x800004C0
+TestStructArrayVar1.level1_2.level2_1.levle3_2.level4_2.FiledEnum:D:0xD0013584
+TestStructArrayVar1.level1_2.level2_1.levle3_2.level4_2.FiledEnumAray[2]:D:0xD0013587
+TestEnumTest1:D:0xD00000B2
+L9301_CHxDIAG[4][5].U:D:0xD000004D
+TestEnumTest11[2]:D:0xD00000AA

@@ -27,7 +27,7 @@ class ElfAddrObj(ELFFile):
     DW_AT_TYPEDEF = 'DW_TAG_typedef'
     DW_AT_NAME = 'DW_AT_name'
     DW_AT_BASE_TYPE = 'DW_TAG_base_type'
-    version = '0.0.4'
+    version = '0.0.5'
 
     def __init__(self, elf_file):
         self.struct_dict = objdict()
@@ -171,6 +171,7 @@ class ElfAddrObj(ELFFile):
             attrs = self._attr_to_dict(next_die)
             self.offset_dict[die.offset][attrs.DW_AT_name] = attrs
             next_die = next(iter_dies)
+        self._process_die(next_die, iter_dies)
 
     def _process_unneeded(self, die, iter_dies):
         while(1):
@@ -238,7 +239,7 @@ class ElfAddrObj(ELFFile):
                     member_name = i.DW_AT_name
                     self.struct_dict[struct_name][member_name] = i
             next_die = next(iter_dies)
-
+        self._process_die(next_die, iter_dies)
 
     def _process_base_type(self, die):
         attrs = self._attr_to_dict(die)
@@ -433,11 +434,14 @@ class ElfAddrObj(ELFFile):
 
     def get_enum_info(self, name):
         enum_type = None
+        res = None
         if name in self.enum_dict:
             enum_type = self.offset_dict[self.enum_dict[name].offset]
         elif name in self.typedef_dict:
             enum_type = self.offset_dict[self.typedef_dict[name].DW_AT_type]
             while enum_type.tag == self.DW_AT_TYPEDEF:
                 enum_type = self.offset_dict[enum_type.DW_AT_type]
-        return {i: enum_type[i].DW_AT_const_value for i in enum_type if type(enum_type[i]) == objdict}
+        if enum_type:
+            res = {i: enum_type[i].DW_AT_const_value for i in enum_type if type(enum_type[i]) == objdict}
+        return res
 

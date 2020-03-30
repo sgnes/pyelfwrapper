@@ -4,3 +4,5 @@
 /elfwrapper/__pycache__/*
 /.idea*
 /example/*
+/elfwrapper/elf_wrapper.py.bak
+/*.bak
