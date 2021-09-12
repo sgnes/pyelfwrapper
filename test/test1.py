@@ -3,7 +3,7 @@ sys.path.append(os.getcwd())
 from elfwrapper.elf_wrapper import ElfAddrObj 
 import datetime
 print("Test time Before Init", datetime.datetime.now())
-elf = ElfAddrObj(r"example\test.elf")
+elf = ElfAddrObj(r"V:\github\pyelfwrapper\example\STM32CubeIDE.elf")
 print("Test time After Init", datetime.datetime.now())
 
 vars = [

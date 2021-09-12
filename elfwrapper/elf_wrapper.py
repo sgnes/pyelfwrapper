@@ -210,8 +210,10 @@ class ElfAddrObj(ELFFile):
         if self.DW_AT_NAME in attrs:
             at_name = attrs.DW_AT_name
         else:
-            # Todo will be handled later
-            print(attrs)
+            at_name = die.offset
+            self._logger.warning(
+                "None named variable found with offset:{0}".format(die.offset))
+            attrs.DW_AT_name = die.offset
         attrs.tag = die.tag
         self.variables_dict[at_name] = attrs
 
