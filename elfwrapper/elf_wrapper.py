@@ -50,10 +50,6 @@ class ElfAddrObj(ELFFile):
         self.elffile = ELFFile(self._elf_file_handler)
         self.dwarfinfo = self.elffile.get_dwarf_info()
         self.section_offset = self.dwarfinfo.debug_info_sec.global_offset
-        try:
-            fileConfig('logging.conf')
-        except KeyError:
-            print("Logging configuration file not found.")
         self._logger = logging.getLogger()
         self._parse_symbol_table()
         self._parse_debug_info()
@@ -317,8 +313,14 @@ class ElfAddrObj(ELFFile):
     def _get_array_member_info(self, mem, root_struct):
         membaseoffset = 0
         mem_base, offset = re.findall(self.re_pattern_varname, mem)[0]
-        off = re.findall(self._re_pattern,
-                         root_struct[mem_base].DW_AT_data_member_location)[0]
+        res = re.findall(self._re_pattern, root_struct[mem_base].DW_AT_data_member_location)
+        if res:
+            off = res[0]
+        else:
+            try:
+                off = int(root_struct[mem_base].DW_AT_data_member_location)
+            except Exception as e:
+                self._logger.error(e)
         membaseoffset += int(off)
         self._logger.info("Element :{0}, offset:{1}".format(mem_base, off))
         root_type = self.offset_dict[self.array_type_dict[root_struct[mem_base].DW_AT_type].DW_AT_type]
@@ -393,8 +395,14 @@ class ElfAddrObj(ELFFile):
                             mem, root_struct)
                     else:
                         # None array field
-                        off = re.findall(
-                            self._re_pattern, root_struct[mem_base].DW_AT_data_member_location)[0]
+                        res = re.findall(self._re_pattern, root_struct[mem_base].DW_AT_data_member_location)
+                        if res:
+                            off = res[0]
+                        else:
+                            try:
+                                off = int(root_struct[mem_base].DW_AT_data_member_location)
+                            except Exception as e:
+                                self._logger.error(e)
                         membaseoffset = int(off)
                         root_type = self.offset_dict[root_struct[mem_base].DW_AT_type]
                         self._logger.info(

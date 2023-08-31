@@ -17,7 +17,7 @@ class TestApp(unittest.TestCase):
                 var, _, add  = line.split(":")
                 if elf.get_var_addrs(var) == int(add.strip(),16):
                     print()
-        #self.assertEqual(, elf.get_var_addrs(""))
+                self.assertEqual(int(add.strip(),16), elf.get_var_addrs(""))
 
 
 

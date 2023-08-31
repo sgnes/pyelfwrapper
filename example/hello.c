@@ -53,6 +53,13 @@ TestStructArrayLevel2Type level1_2;
 }TestStructArrayLevel1Type;
 
 
+typedef enum
+{
+    TestEnum1 = 0,
+    TestEnum2
+}TestEnumType;
+
+
 typedef struct TestStructLevel5{
 uint8 level5_1;
 uint8 level5_2;
@@ -130,6 +137,11 @@ struct TestStruct5
 };
 
 struct TestStruct5 TestStruct5Var[4];
+
+TestEnumType TestEnumTest11[10];
+TestEnumType TestEnumTest1;
+uint8 testU8xxxx[3][4][5];
+uint8 testU8xxxxyyy[3][4][5];
 
 int main(void)
 {
