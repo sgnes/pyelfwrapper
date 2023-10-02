@@ -3,9 +3,11 @@
 [![Build Status](https://travis-ci.org/sgnes/elf_dwarf_wrapper.svg?branch=master)](https://travis-ci.org/sgnes/elf_dwarf_wrapper)
 [![Coverage Status](https://coveralls.io/repos/github/sgnes/elf_dwarf_wrapper/badge.svg?branch=master)](https://coveralls.io/github/sgnes/elf_dwarf_wrapper?branch=master)
 
-This tool use the [pyelftools](https://github.com/eliben/pyelftools) to parse the elf file, and provide a interface
-for user to get the global variable address informations.
+This tool use the [pyelftools](https://github.com/eliben/pyelftools) to parse the elf file, and provide an interface
+for user to get the global variable address information.
 
+This was intended to update the address information in the A2L file for CCP/XCP calibration, 
+which use widely used in automotive industry.
 
 
 ### Installation
@@ -22,6 +24,8 @@ $ pip install pyelfwrapper
 
 ### How to use it
 
+#### Step 1:
+Write An example c source code with global variables.
 ```c 
 #include <stdlib.h>
 
@@ -199,6 +203,15 @@ int main(void)
 }
 
 ```
+#### Step 2:
+Compile it to an elf file.
+
+```shell 
+arm-none-eabi-gcc --specs=nosys.specs -g hello.c -o  hello_arm_none_eabi_gcc.elf
+```
+
+#### Step 3:
+Use this tool to get global variable address.
 
 ```python 
 from elfwrapper.elf_wrapper import ElfAddrObj
@@ -209,6 +222,7 @@ var_addr = elf.get_var_addrs('TestStruct5Var[1].TestUnionArrayLevel1TypeMem[3].l
 print(var_addr)
 enum_info = elf.get_enum_info('TestEnumAType')
 ```
+
 
 ### Supported variable types
 - structure 
