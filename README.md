@@ -7,7 +7,7 @@ This tool use the [pyelftools](https://github.com/eliben/pyelftools) to parse th
 for user to get the global variable address information.
 
 This was intended to update the address information in the A2L file for CCP/XCP calibration, 
-which use widely used in automotive industry.
+which was widely used in automotive industry.
 
 
 ### Installation
