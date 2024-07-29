@@ -18,7 +18,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-          'pyelftools',
+          'pyelftools==0.29',
       ],
     packages=[
         'elfwrapper'
