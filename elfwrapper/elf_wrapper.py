@@ -1,7 +1,5 @@
 import re
 from elftools.elf.sections import NoteSection, SymbolTableSection
-from elftools.common.py3compat import (
-    ifilter, byte2int, bytes2str, itervalues, str2bytes)
 from elftools.elf.elffile import ELFFile
 from elftools.dwarf.descriptions import (
     describe_reg_name, describe_attr_value, set_global_machine_arch,
@@ -141,7 +139,7 @@ class ElfAddrObj(ELFFile):
             pass
         elif die.tag == "DW_TAG_const_type":
             self.offset_dict[die.offset] = self._attr_to_dict(die)
-        elif die.tag == None:
+        elif die.tag is None:
             pass
         elif die.tag == "DW_TAG_volatile_type":
             self.offset_dict[die.offset] = self._attr_to_dict(die)
@@ -268,9 +266,7 @@ class ElfAddrObj(ELFFile):
         self._process_die(next_die, iter_dies)
 
     def _attr_to_dict(self, die):
-        attrs_raw = {attr[0]: attr for attr in
-                     [(attr.name, attr.offset, describe_attr_value(attr, die, self.section_offset).strip()) for attr in
-                      itervalues(die.attributes)]}
+        attrs_raw = {attr[0]: attr for attr in  [(die.attributes[key_attr].name, die.attributes[key_attr].offset, describe_attr_value(die.attributes[key_attr], die, self.section_offset).strip()) for key_attr in die.attributes]}
 
         attrs = objdict()
         attrs.tag = die.tag

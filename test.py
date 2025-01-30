@@ -12,12 +12,12 @@ class TestApp(unittest.TestCase):
 
     def test_1(self):
         elf = ElfAddrObj(os.path.join(os.getcwd(), r"example/Test.elf"))
-        with open(r'example\test_var.txtdatafile.txt') as f:
+        with open(r'example\test_var.txtdatafile.txt', mode="r", encoding="utf-8") as f:
             for line in f:
                 var, _, add  = line.split(":")
                 if elf.get_var_addrs(var) == int(add.strip(),16):
-                    print()
-                self.assertEqual(int(add.strip(),16), elf.get_var_addrs(""))
+                    print(var, add)
+                self.assertEqual(int(add.strip(),16), elf.get_var_addrs(var))
 
 
 
