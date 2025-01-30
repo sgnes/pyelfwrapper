@@ -1,18 +1,15 @@
 import re
-from elftools.elf.sections import NoteSection, SymbolTableSection
+from elftools.elf.sections import SymbolTableSection
 from elftools.elf.elffile import ELFFile
 from elftools.dwarf.descriptions import (
-    describe_reg_name, describe_attr_value, set_global_machine_arch,
-    describe_CFI_instructions, describe_CFI_register_rule,
-    describe_CFI_CFA_rule,
+    describe_attr_value,
 )
 from elftools.elf.gnuversions import (
     GNUVerSymSection, GNUVerDefSection,
     GNUVerNeedSection,
 )
-from elftools.elf.dynamic import DynamicSection, DynamicSegment
+from elftools.elf.dynamic import DynamicSection
 import logging
-from logging.config import fileConfig
 from elfwrapper.elf_exception import ParseSequenceError,UnSupportedElfFormatError
 from elfwrapper.utility import objdict
 
